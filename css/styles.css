@@ -1,0 +1,162 @@
+/* Estilos personalizados */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.hero {
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x900/?physics') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 50px 0;
+}
+
+.hero h1, .hero h2 {
+    margin: 0;
+    text-shadow: 2px 2px 4px #000000; /* Contorno preto */
+}
+
+.plan-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.plan {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 420px;
+    max-width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan h3 {
+    margin-top: 0;
+}
+
+.plan .price {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    font-family: 'Arial Black', Gadget, sans-serif; /* Fonte mais grossa */
+}
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial .rating {
+    color: gold;
+}
+
+.about {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .plan {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .toggle-container {
+        top: -10px;
+    }
+}

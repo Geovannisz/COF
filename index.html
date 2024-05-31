@@ -4,143 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Curso Online de Física</title>
-    <style>
-        /* Estilos personalizados */
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        .hero {
-            text-align: center;
-            background: url('https://source.unsplash.com/1600x900/?physics') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 50px 0;
-        }
-        .hero h1, .hero h2 {
-            margin: 0;
-        }
-        .plan-carousel {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px 0;
-            position: relative;
-        }
-        .plan {
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            min-width: 420px;
-            max-width: 420px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .plan:hover {
-            transform: scale(1.05);
-        }
-        .plan h3 {
-            margin-top: 0;
-        }
-        .toggle-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .toggle-button {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        .toggle-button input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        input:checked + .slider {
-            background-color: #007bff;
-        }
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-        .testimonials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        .testimonial {
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 300px;
-            text-align: center;
-        }
-        .testimonial img {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-        }
-        .testimonial p {
-            font-style: italic;
-        }
-        .testimonial .rating {
-            color: gold;
-        }
-        .about {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .about img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-        }
-        @media (max-width: 768px) {
-            .plan {
-                min-width: 100%;
-                max-width: 100%;
-            }
-            .toggle-container {
-                top: -10px;
-            }
-        }
-    </style>
 </head>
 <body>
     <nav class="container-fluid">
@@ -178,7 +43,7 @@
                 <!-- Plano Newton Mensal -->
                 <div class="plan" data-plan="mensal">
                     <h3>Plano Newton</h3>
-                    <p><strong>R$ 19,90 mensal</strong></p>
+                    <p class="price"><strong>R$ 19,90 mensal</strong></p>
                     <ul>
                         <li>Acesso a todas as aulas já gravadas</li>
                         <li>Acesso às listas de exercícios</li>
@@ -190,7 +55,7 @@
                 <!-- Plano Einstein Mensal -->
                 <div class="plan" data-plan="mensal">
                     <h3>Plano Einstein</h3>
-                    <p><strong>R$ 29,90 mensal</strong></p>
+                    <p class="price"><strong>R$ 29,90 mensal</strong></p>
                     <ul>
                         <li>Inclui tudo do Plano Newton</li>
                         <li>Acesso ao Grupo do WhatsApp</li>
@@ -204,7 +69,7 @@
                 <!-- Plano Newton Anual -->
                 <div class="plan" data-plan="anual" style="display: none;">
                     <h3>Plano Newton</h3>
-                    <p><strong>R$ 199,90 anual</strong></p>
+                    <p class="price"><strong>R$ 199,90 anual</strong></p>
                     <ul>
                         <li>Acesso a todas as aulas já gravadas</li>
                         <li>Acesso às listas de exercícios</li>
@@ -216,7 +81,7 @@
                 <!-- Plano Einstein Anual -->
                 <div class="plan" data-plan="anual" style="display: none;">
                     <h3>Plano Einstein</h3>
-                    <p><strong>R$ 299,90 anual</strong></p>
+                    <p class="price"><strong>R$ 299,90 anual</strong></p>
                     <ul>
                         <li>Inclui tudo do Plano Newton</li>
                         <li>Acesso ao Grupo do WhatsApp</li>
@@ -273,22 +138,6 @@
         <small><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></small>
     </footer>
 
-    <script>
-        function togglePlans() {
-            const isChecked = document.getElementById('plan-toggle').checked;
-            const plans = document.querySelectorAll('.plan');
-            const planTypeText = document.getElementById('plan-type');
-            plans.forEach(plan => {
-                if (isChecked && plan.getAttribute('data-plan') === 'anual') {
-                    plan.style.display = 'block';
-                } else if (!isChecked && plan.getAttribute('data-plan') === 'mensal') {
-                    plan.style.display = 'block';
-                } else {
-                    plan.style.display = 'none';
-                }
-            });
-            planTypeText.textContent = isChecked ? 'Anual' : 'Mensal';
-        }
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
