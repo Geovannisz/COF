@@ -53,6 +53,15 @@ body {
     font-family: 'Arial Black', Gadget, sans-serif; /* Fonte mais grossa */
 }
 
+.center-content {
+    text-align: center;
+}
+
+.center-content a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
 .toggle-container {
     display: flex;
     flex-direction: column;
@@ -148,15 +157,6 @@ input:checked + .slider:before {
     height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
-}
-
-.center-content {
-    text-align: center;
-}
-
-.center-content a {
-    display: inline-block;
-    margin-top: 20px;
 }
 
 footer {
