@@ -49,7 +49,7 @@ body {
 }
 
 .plan .price {
-    font-size: 6em; /* Aumenta o tamanho da fonte */
+    font-size: 3em; /* Aumenta o tamanho da fonte */
     font-family: 'Arial Black', Gadget, sans-serif; /* Fonte mais grossa */
 }
 
