@@ -49,17 +49,8 @@ body {
 }
 
 .plan .price {
-    font-size: 3em; /* Aumenta o tamanho da fonte */
+    font-size: 6em; /* Aumenta o tamanho da fonte */
     font-family: 'Arial Black', Gadget, sans-serif; /* Fonte mais grossa */
-}
-
-.center-content {
-    text-align: center;
-}
-
-.center-content a {
-    display: inline-block;
-    margin-top: 20px;
 }
 
 .toggle-container {
@@ -157,6 +148,15 @@ input:checked + .slider:before {
     height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.center-content a {
+    display: inline-block;
+    margin-top: 20px;
 }
 
 footer {
