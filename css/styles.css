@@ -17,6 +17,10 @@ body {
     text-shadow: 2px 2px 4px #000000; /* Contorno preto */
 }
 
+.hero h1, .hero h2, .hero p {
+    text-shadow: 2px 2px 4px #000000;
+}
+
 .plan-carousel {
     display: flex;
     justify-content: center;
@@ -45,7 +49,7 @@ body {
 }
 
 .plan .price {
-    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    font-size: 6em; /* Aumenta o tamanho da fonte */
     font-family: 'Arial Black', Gadget, sans-serif; /* Fonte mais grossa */
 }
 
