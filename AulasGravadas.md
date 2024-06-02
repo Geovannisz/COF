@@ -247,52 +247,102 @@
 
 ### Álgebra Linear 1
 
+:x: A definir
+
 ### Cálculo 2
+
+:x: A definir
 
 ### Física 2
 
+:x: A definir
+
 ### Probabilidade
+
+:x: A definir
 
 ### Cálculo 3
 
+:x: A definir
+
 ### Física 3
+
+:x: A definir
 
 ### Análise de Dados em Física Experimental
 
+:x: A definir
+
 ### Cálculo 4
+
+:x: A definir
 
 ### Física 4
 
+:x: A definir
+
 ### Cálculo Numérico
+
+:x: A definir
 
 ### Física Matemática 1
 
+:x: A definir
+
 ### Mecânica
+
+:x: A definir
 
 ### Mecânica dos Fluidos
 
+:x: A definir
+
 ### Mecânica Estatística
+
+:x: A definir
 
 ### Física Quântica
 
+:x: A definir
+
 ### Física Nuclear
+
+:x: A definir
 
 ### Álgebra Linear 2
 
+:x: A definir
+
 ### Mecânica Quântica
 
+:x: A definir
+
 ### Eletromagnetismo 1
+
+:x: A definir
 
 ## Disciplinas Extras
 
 ### Fundamentos de Astronomia
 
+:x: A definir
+
 ### Mecânica Celeste
+
+:x: A definir
 
 ### Astrofísica Estelar
 
+:x: A definir
+
 ### Astrofísica Galáctica e Extragaláctica
+
+:x: A definir
 
 ### Cosmologia
 
+:x: A definir
+
 ### Relatividade Geral
+
+:x: A definir
