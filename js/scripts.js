@@ -1,1 +1,3 @@
-// Adicione aqui qualquer funcionalidade JavaScript necessária
+$(document).ready(function() {
+    // Adicione qualquer funcionalidade JavaScript necessária aqui
+});
