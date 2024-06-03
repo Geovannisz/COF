@@ -3,142 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Curso Online de Física</title>
+    <title>Planos e Preços - TradingView</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="container-fluid">
-        <ul>
-            <li><strong>Curso Online de Física</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#inscricao" role="button">Inscreva-se</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <h1>Curso Online de Física</h1>
-        <h2>Domine todos os conceitos da física com aulas completas e detalhadas</h2>
-        <p>Nosso curso aborda todos os temas de uma faculdade de física, preparando você para enfrentar todos os desafios em sua carreira.</p>
-    </header>
-
-    <main class="container">
-        <section id="planos">
-            <h2>Planos de Assinatura</h2>
-            <p>Escolha o plano que melhor se adapta às suas necessidades:</p>
-
-            <div class="toggle-container">
-                <span id="plan-type">Mensal</span>
-                <label class="toggle-button">
-                    <label for="plan-toggle">Toggle</label>
-                    <input type="checkbox" id="plan-toggle" onclick="togglePlans()">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="plan-carousel" id="plan-carousel">
-                <!-- Plano Newton Mensal -->
-                <div class="plan" data-plan="mensal">
-                    <h3>Plano Newton</h3>
-                    <p class="price"><strong>R$ 19,90</strong></p>
-                    <ul>
-                        <li>Acesso a todas as aulas já gravadas</li>
-                        <li>Acesso às listas de exercícios</li>
-                        <li>Acesso aos materiais de estudo</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" role="button">Assine Agora</a>
-                </div>
-
-                <!-- Plano Einstein Mensal -->
-                <div class="plan" data-plan="mensal">
-                    <h3>Plano Einstein</h3>
-                    <p class="price"><strong>R$ 29,90</strong></p>
-                    <ul>
-                        <li>Inclui tudo do Plano Newton</li>
-                        <li>Acesso ao Grupo do WhatsApp</li>
-                        <li>Acesso ao Drive de +1TB do Curso</li>
-                        <li>Atendimento personalizado</li>
-                        <li>Lives mensais com os alunos</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" role="button">Assine Agora</a>
-                </div>
-
-                <!-- Plano Newton Anual -->
-                <div class="plan" data-plan="anual">
-                    <h3>Plano Newton</h3>
-                    <p class="price"><strong>R$ 199,90</strong></p>
-                    <ul>
-                        <li>Acesso a todas as aulas já gravadas</li>
-                        <li>Acesso às listas de exercícios</li>
-                        <li>Acesso aos materiais de estudo</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" role="button">Assine Agora</a>
-                </div>
-
-                <!-- Plano Einstein Anual -->
-                <div class="plan" data-plan="anual">
-                    <h3>Plano Einstein</h3>
-                    <p class="price"><strong>R$ 299,90</strong></p>
-                    <ul>
-                        <li>Inclui tudo do Plano Newton</li>
-                        <li>Acesso ao Grupo do WhatsApp</li>
-                        <li>Acesso ao Drive de +1TB do Curso</li>
-                        <li>Atendimento personalizado</li>
-                        <li>Lives mensais com os alunos</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" role="button">Assine Agora</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <h2>Depoimentos</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/80" alt="Depoimento 1">
-                    <p>"Este curso mudou minha vida! As aulas são incríveis e os professores são muito atenciosos."</p>
-                    <div class="rating">★★★★★</div>
-                    <p><strong>João Silva</strong></p>
-                </div>
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/80" alt="Depoimento 2">
-                    <p>"Recomendo a todos que querem aprender física de verdade. O conteúdo é muito completo."</p>
-                    <div class="rating">★★★★★</div>
-                    <p><strong>Maria Oliveira</strong></p>
-                </div>
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/80" alt="Depoimento 3">
-                    <p>"A melhor decisão que tomei foi me inscrever neste curso. Vale cada centavo!"</p>
-                    <div class="rating">★★★★★</div>
-                    <p><strong>Carlos Pereira</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>Sobre o Professor</h2>
-            <div class="about">
-                <img src="https://via.placeholder.com/150" alt="Professor">
-                <p>Olá! Eu sou o Professor Fictício, especialista em física com mais de 20 anos de experiência. Minha missão é tornar a física acessível e interessante para todos. Junte-se a mim nesta jornada de aprendizado e descubra o fascinante mundo da física!</p>
-            </div>
-        </section>
-
-        <section id="inscricao" class="center-content">
-            <h2>Inscreva-se Agora</h2>
-            <p>Garanta sua vaga no nosso curso de física.</p>
-            <a href="https://chat.whatsapp.com/EgKB4qFArzFDzNVPCxFUod" role="button">Junte-se ao Grupo do WhatsApp</a>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Curso Online de Física. Todos os direitos reservados.</p>
-        <small><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></small>
-    </footer>
-
-    <script src="js/scripts.js"></script>
+    <div class="pricing-container">
+        <h2>Planos para todos os níveis de ambição</h2>
+        <div class="plan">
+            <h3>Gratuito</h3>
+            <p>$0 para sempre</p>
+            <p>Não é necessário cartão de crédito</p>
+        </div>
+        <div class="plan">
+            <h3>Mensal</h3>
+            <p>16%. É como se fossem 60 dias gratuitos</p>
+        </div>
+        <div class="plan">
+            <h3>Anual</h3>
+            <p>16%. É como se fossem 60 dias gratuitos</p>
+        </div>
+        <div class="plan-details">
+            <h4>Gráficos por aba</h4>
+            <p>1, 2, 4, 8, 10, 12, 16</p>
+            <h4>Número de layouts de gráficos salvos</h4>
+            <p>1, 5, 10</p>
+            <h4>Tempos gráficos customizados</h4>
+            <p>Tempo gráfico em segundos</p>
+            <h4>Gráficos intradiários Renko, Kagi, Quebras de linha e Ponto & Figura</h4>
+            <p>Sim</p>
+            <h4>Barras de Range customizado</h4>
+            <p>Sim</p>
+            <h4>Gráficos intradiários baseados em fórmulas personalizadas (spreads)</h4>
+            <p>Sim</p>
+            <h4>Exportar dados do gráfico</h4>
+            <p>Sim</p>
+            <h4>Mais de 15 tipos de gráficos customizados</h4>
+            <p>Sim</p>
+            <h4>Dividendos ajustados no gráfico</h4>
+            <p>Sim</p>
+            <h4>Ganhos, desdobramentos e dividendos interativos</h4>
+            <p>Sim</p>
+            <h4>Dados históricos financeiros anuais no gráfico</h4>
+            <p>7 anos, 20 anos</p>
+            <h4>Dados históricos financeiros trimestrais no gráfico</h4>
+            <p>8 anos</p>
+            <h4>Horário de negociação estendido</h4>
+            <p>Sim</p>
+            <h4>Conexões simultâneas do gráfico</h4>
+            <p>2, 10, 20, 50, 80, 120, 200</p>
+            <h4>Dados históricos por dia e em tempos gráficos superiores</h4>
+            <p>Todos</p>
+            <h4>Dados históricos por minuto</h4>
+            <p>42 dias, 180 dias, 270 dias, 360 dias, 450 dias</p>
+            <h4>Dados históricos por segundo</h4>
+            <p>90 dias, 120 dias, 150 dias, 180 dias</p>
+            <h4>Negociação no Replay de Barras</h4>
+            <p>Sim</p>
+            <h4>Mais de 400 indicadores pré-construídos</h4>
+            <p>Sim</p>
+            <h4>100K+ indicadores desenvolvidos pela comunidade</h4>
+            <p>Sim</p>
+            <h4>Indicador no indicador</h4>
+            <p>1, 9, 24, 29, 34, 49</p>
+            <h4>Indicadores por gráfico</h4>
+            <p>2, 5, 10, 25, 30, 35, 50</p>
+            <h4>Informações financeiras por gráfico</h4>
+            <p>1, 4, 7, 10, 15, 20, 25</p>
+            <h4>Modelos de Indicadores Customizados</h4>
+            <p>1</p>
+            <h4>Mais de 110 ferramentas de desenho inteligente</h4>
+            <p>Sim</p>
+            <h4>Indicadores de Perfil de Volume</h4>
+            <p>Sim</p>
+            <h4>Testes de estratégias de trading</h4>
+            <p>Sim</p>
+            <h4>Exportar dados da estratégia</h4>
+            <p>Sim</p>
+            <h4>Reconhecimento de padrões de candlestick</h4>
+            <p>Sim</p>
+            <h4>Análise de múltiplos tempos gráficos</h4>
+            <p>Sim</p>
+            <h4>Tempo limite para fazer cálculos</h4>
+            <p>20s, 40s, 60s, 80s, 100s</p>
+            <h4>Padrões Automáticos de Gráfico</h4>
+            <p>Sim</p>
+            <h4>Número de listas de observação</h4>
+            <p>1</p>
+            <h4>Símbolos por lista de observação</h4>
+            <p>30, 1000</p>
+            <h4>Símbolos marcados com cores</h4>
+            <p>1, 7</p>
+            <h4>Colunas customizadas e ordenadas</h4>
+            <p>Sim</p>
+            <h4>Alertas de preço ativos</h4>
+            <p>5, 20, 100, 400, 600, 800, 1000</p>
+            <h4>Alertas técnicos ativos em indicadores, estratégias ou desenhos</h4>
+            <p>1, 20, 100, 400, 600, 800, 1000</p>
+            <h4>Duração de alerta</h4>
+            <p>2 M.</p>
+            <h4>Alertas baseados em segundos</h4>
+            <p>Sim</p>
+            <h4>Tela com refresh automático</h4>
+            <p>Sim</p>
+            <h4>Múltiplos tempos gráficos</h4>
+            <p>D S M, Todos</p>
+            <h4>Mais de 150 bolsas de mais de 50 países</h4>
+            <p>Sim</p>
+            <h4>Rastreadores de câmbio e criptoativos</h4>
+            <p>Sim</p>
+            <h4>100+ opções técnicas e fundamentalistas</h4>
+            <p>Sim</p>
+            <h4>Símbolos marcados com cores</h4>
+            <p>1, 7</p>
+            <h4>Fluxo de dados mais rápido</h4>
+            <p>Sim</p>
+            <h4>Máximo de assinaturas de dados de mercado permitidas</h4>
+            <p>2, 4, 6, 12, 20</p>
+            <h4>Barras históricas disponíveis</h4>
+            <p>5Mil, 10Mil, 20Mil, 25Mil, 30Mil, 40Mil</p>
+            <h4>Fonte de dados de backup protegida</h4>
+            <p>Sim</p>
+            <h4>Fundamentos (dados de fundamentos de ações)</h4>
+            <p>Sim</p>
+            <h4>Notícias contextualizadas em tempo-real</h4>
+            <p>Sim</p>
+            <h4>Calendários econômicos e de resultados</h4>
+            <p>Sim</p>
+            <h4>Faça trades por meio de corretoras selecionadas</h4>
+            <p>Sim</p>
+            <h4>Negociação simulada (Paper Trading)</h4>
+            <p>Sim</p>
+            <h4>Negociação por Profundidade do Mercado (DOM)</h4>
+            <p>Sim</p>
+            <h4>Emblema exclusivo ao lado do seu nome</h4>
+            <p>Sim</p>
+            <h4>Campos de assinatura e site</h4>
+            <p>Sim</p>
+            <h4>Publique indicadores sob convite</h4>
+            <p>Sim</p>
+            <h4>Publique scripts protegidos</h4>
+            <p>Sim</p>
+            <h4>Publicar ideias e scripts públicos</h4>
+            <p>Sim</p>
+            <h4>Comentários em ideias, scripts e minds públicos</h4>
+            <p>Sim</p>
+            <h4>Notificações de alertas nativas</h4>
+            <p>Sim</p>
+            <h4>Suporte multi-monitor nativo</h4>
+            <p>Sim</p>
+            <h4>Aba ligada por símbolo entre janelas</h4>
+            <p>Sim</p>
+            <h4>Suporte ao cliente</h4>
+            <p>Regular, Prioridade, Atendimento Prioritário</p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
