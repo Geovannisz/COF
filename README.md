@@ -40,7 +40,7 @@ Atenderei cada um de forma personalizada, auxiliando na correção das listas de
 
 ## Lista de Aulas
 
-Irei adicionar amanhã...
+Veja essa lista [aqui](https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md).
 
 ## Autor
 
