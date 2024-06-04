@@ -1,52 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planos e Preços</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escolha seu plano ideal</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="pricing-section">
-        <h1>Planos para todos os níveis de ambição</h1>
-        <div class="toggle-container">
-            <label class="switch">
-                <input type="checkbox" id="toggle-pricing">
-                <span class="slider"></span>
-            </label>
-            <span class="toggle-label">Anual</span>
+  <section class="hero">
+    <div class="container">
+      <div class="content">
+        <h2>Escolha seu plano ideal</h2>
+        <p>Encontre o plano que melhor se adapta às suas necessidades.</p>
+        <div class="toggle">
+          <span>Mensal</span>
+          <button type="button" role="switch" aria-checked="false" data-state="unchecked" id="plan-toggle">
+            <span class="toggle-slider"></span>
+          </button>
+          <span>Anual</span>
         </div>
-        <div class="pricing-cards">
-            <div class="card">
-                <h2>Plano Newton</h2>
-                <p class="price monthly-price">R$19,90/mês</p>
-                <p class="price annual-price">R$199,90/ano (R$16,66/mês)</p>
-                <ul class="features">
-                    <li><i class="fas fa-check"></i> Acesso às aulas já gravadas</li>
-                    <li><i class="fas fa-check"></i> Acesso às listas de exercícios</li>
-                    <li><i class="fas fa-check"></i> Acesso aos materiais de estudo</li>
-                </ul>
-                <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" class="btn monthly-price">Assinar Mensal</a>
-                <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" class="btn annual-price">Assinar Anual</a>
+      </div>
+      <div class="plans" id="plans-container">
+        <div class="plan" data-plan="newton">
+          <div class="plan-content">
+            <h3>Plano Newton</h3>
+            <div class="price">
+              <span class="price-value">R$19,90</span>
+              <span class="price-period">/mês</span>
             </div>
-            <div class="card">
-                <h2>Plano Einstein</h2>
-                <p class="price monthly-price">R$29,90/mês</p>
-                <p class="price annual-price">R$299,90/ano (R$24,99/mês)</p>
-                <ul class="features">
-                    <li><i class="fas fa-check"></i> Tudo do plano Newton</li>
-                    <li><i class="fas fa-check"></i> Acesso ao Grupo de Dúvidas do WhatsApp</li>
-                    <li><i class="fas fa-check"></i> Acesso ao Drive de +1TB do Curso</li>
-                    <li><i class="fas fa-check"></i> Atendimento personalizado</li>
-                    <li><i class="fas fa-check"></i> Lives mensais com os alunos</li>
-                </ul>
-                <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" class="btn monthly-price">Assinar Mensal</a>
-                <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" class="btn annual-price">Assinar Anual</a>
-            </div>
+            <ul class="features">
+              <li>Acesso a todas as aulas já gravadas</li>
+              <li>Acesso às listas de exercícios</li>
+              <li>Acesso aos materiais de estudo</li>
+              <li class="unavailable">Acesso ao Grupo de Dúvidas do WhatsApp</li>
+              <li class="unavailable">Acesso ao Drive de +1TB do Curso</li>
+              <li class="unavailable">Atendimento personalizado</li>
+              <li class="unavailable">Lives mensais com os alunos</li>
+            </ul>
+            <button class="subscribe-button">
+              <a href="#" rel="ugc">Assinar</a>
+            </button>
+          </div>
         </div>
-    </section>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="js/script.js"></script>
+        <div class="plan" data-plan="einstein">
+          <div class="plan-content">
+            <h3>Plano Einstein</h3>
+            <div class="price">
+              <span class="price-value">R$29,90</span>
+              <span class="price-period">/mês</span>
+            </div>
+            <ul class="features">
+              <li>Acesso a todas as aulas já gravadas</li>
+              <li>Acesso às listas de exercícios</li>
+              <li>Acesso aos materiais de estudo</li>
+              <li>Acesso ao Grupo de Dúvidas do WhatsApp</li>
+              <li>Acesso ao Drive de +1TB do Curso</li>
+              <li>Atendimento personalizado</li>
+              <li>Lives mensais com os alunos</li>
+            </ul>
+            <button class="subscribe-button">
+              <a href="#" rel="ugc">Assinar</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/script.js"></script>
 </body>
 </html>

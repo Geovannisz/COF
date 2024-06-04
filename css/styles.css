@@ -1,145 +1,172 @@
+/* Reset de estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: 'Taviraj', serif;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
-.pricing-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.pricing-section h1 {
-    margin-bottom: 30px;
-    color: #333;
-    font-size: 2em;
+/* Hero Section */
+.hero {
+  background-color: #222;
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
 }
 
-.toggle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+.hero h2 {
+  font-family: 'Yeseva One', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+/* Toggle Button */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+.toggle span {
+  font-size: 1rem;
+  margin: 0 1rem;
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+.toggle button {
+  background-color: #ccc;
+  border: none;
+  border-radius: 2rem;
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  cursor: pointer;
 }
 
-input:checked + .slider {
-    background-color: #007bff;
+.toggle-slider {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  transition: left 0.3s ease;
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
+.toggle button[aria-checked="true"] .toggle-slider {
+  left: 2.25rem;
 }
 
-.toggle-label {
-    margin-left: 10px;
-    font-size: 1.2em;
-    color: #333;
+/* Plans Section */
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-.pricing-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.plan {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
 }
 
-.card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card h2 {
-    margin-top: 0;
-    color: #555;
-    font-size: 1.5em;
+.plan h3 {
+  font-family: 'Yeseva One', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .price {
-    font-size: 24px;
-    color: #333;
-    margin: 10px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
-.annual-price {
-    color: #777;
-    font-size: 20px;
+.price-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.price-period {
+  font-size: 1rem;
+  color: #666;
+  margin-left: 0.5rem;
 }
 
 .features {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    color: #555;
+  list-style: none;
+  margin-bottom: 2rem;
 }
 
 .features li {
-    margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 0.5rem;
 }
 
-.features i {
-    color: #28a745;
-    margin-right: 10px;
+.features .unavailable {
+  color: #999;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+.features li::before {
+  content: "\2713"; /* Checkmark symbol */
+  color: #007bff;
+  margin-right: 0.5rem;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.features .unavailable::before {
+  content: "\2717"; /* X symbol */
+  color: #999;
+}
+
+.subscribe-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #0069d9;
+}
+
+.subscribe-button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .plans {
+    grid-template-columns: 1fr;
+  }
 }
