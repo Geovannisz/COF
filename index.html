@@ -1,71 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Escolha seu plano ideal</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu plano ideal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj&family=Yeseva+One&display=swap" rel="stylesheet">
 </head>
-<body>
-  <section class="hero">
-    <div class="container">
-      <div class="content">
-        <h2>Escolha seu plano ideal</h2>
-        <p>Encontre o plano que melhor se adapta às suas necessidades.</p>
-        <div class="toggle">
-          <span>Mensal</span>
-          <button type="button" role="switch" aria-checked="false" data-state="unchecked" id="plan-toggle">
-            <span class="toggle-slider"></span>
-          </button>
-          <span>Anual</span>
-        </div>
-      </div>
-      <div class="plans" id="plans-container">
-        <div class="plan" data-plan="newton">
-          <div class="plan-content">
-            <h3>Plano Newton</h3>
-            <div class="price">
-              <span class="price-value">R$19,90</span>
-              <span class="price-period">/mês</span>
+<body class="font-taviraj">
+    <section class="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
+        <div class="container px-4 md:px-6">
+            <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Escolha seu plano ideal</h2>
+                    <p class="max-w-[700px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                        Encontre o plano que melhor se adapta às suas necessidades.
+                    </p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-sm font-medium">Mensal</span>
+                    <label class="switch relative inline-flex h-6 w-11 items-center rounded-full bg-gray-700">
+                        <input type="checkbox" class="sr-only" />
+                        <span class="slider inline-block h-4 w-4 transform rounded-full transition bg-gray-50 text-gray-900"></span>
+                    </label>
+                    <span class="text-sm font-medium">Anual</span>
+                </div>
             </div>
-            <ul class="features">
-              <li>Acesso a todas as aulas já gravadas</li>
-              <li>Acesso às listas de exercícios</li>
-              <li>Acesso aos materiais de estudo</li>
-              <li class="unavailable">Acesso ao Grupo de Dúvidas do WhatsApp</li>
-              <li class="unavailable">Acesso ao Drive de +1TB do Curso</li>
-              <li class="unavailable">Atendimento personalizado</li>
-              <li class="unavailable">Lives mensais com os alunos</li>
-            </ul>
-            <button class="subscribe-button">
-              <a href="#" rel="ugc">Assinar</a>
-            </button>
-          </div>
-        </div>
-        <div class="plan" data-plan="einstein">
-          <div class="plan-content">
-            <h3>Plano Einstein</h3>
-            <div class="price">
-              <span class="price-value">R$29,90</span>
-              <span class="price-period">/mês</span>
+            <div class="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                <div class="group rounded-lg border border-gray-700 bg-gray-950 p-6 shadow-sm transition-all hover:border-gray-50">
+                    <div class="flex flex-col items-center space-y-4">
+                        <h3 class="text-2xl font-bold">Plano Newton</h3>
+                        <div class="flex items-baseline space-x-2">
+                            <span class="price text-4xl font-bold">R$19,90</span>
+                            <span class="text-gray-300">/mês</span>
+                        </div>
+                        <ul class="flex flex-col items-start space-y-2 text-left">
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso a todas as aulas já gravadas
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso às listas de exercícios
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso aos materiais de estudo
+                            </li>
+                            <li class="text-gray-600">
+                                <svg class="mr-2 inline-block h-4 w-4 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6 6 18" />
+                                    <path d="m6 6 12 12" />
+                                </svg>
+                                Acesso ao Grupo de Dúvidas do WhatsApp
+                            </li>
+                            <li class="text-gray-600">
+                                <svg class="mr-2 inline-block h-4 w-4 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6 6 18" />
+                                    <path d="m6 6 12 12" />
+                                </svg>
+                                Acesso ao Drive de +1TB do Curso
+                            </li>
+                            <li class="text-gray-600">
+                                <svg class="mr-2 inline-block h-4 w-4 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6 6 18" />
+                                    <path d="m6 6 12 12" />
+                                </svg>
+                                Atendimento personalizado
+                            </li>
+                            <li class="text-gray-600">
+                                <svg class="mr-2 inline-block h-4 w-4 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6 6 18" />
+                                    <path d="m6 6 12 12" />
+                                </svg>
+                                Lives mensais com os alunos
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700">
+                            <a href="#" prefetch={false}>Assinar</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="group rounded-lg border border-gray-700 bg-gray-950 p-6 shadow-sm transition-all hover:border-gray-50">
+                    <div class="flex flex-col items-center space-y-4">
+                        <h3 class="text-2xl font-bold">Plano Einstein</h3>
+                        <div class="flex items-baseline space-x-2">
+                            <span class="price text-4xl font-bold">R$29,90</span>
+                            <span class="text-gray-300">/mês</span>
+                        </div>
+                        <ul class="flex flex-col items-start space-y-2 text-left">
+                                                        <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso a todas as aulas já gravadas
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso às listas de exercícios
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso aos materiais de estudo
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso ao Grupo de Dúvidas do WhatsApp
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Acesso ao Drive de +1TB do Curso
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Atendimento personalizado
+                            </li>
+                            <li>
+                                <svg class="mr-2 inline-block h-4 w-4 text-purple-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Lives mensais com os alunos
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700">
+                            <a href="#" prefetch={false}>Assinar</a>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <ul class="features">
-              <li>Acesso a todas as aulas já gravadas</li>
-              <li>Acesso às listas de exercícios</li>
-              <li>Acesso aos materiais de estudo</li>
-              <li>Acesso ao Grupo de Dúvidas do WhatsApp</li>
-              <li>Acesso ao Drive de +1TB do Curso</li>
-              <li>Atendimento personalizado</li>
-              <li>Lives mensais com os alunos</li>
-            </ul>
-            <button class="subscribe-button">
-              <a href="#" rel="ugc">Assinar</a>
-            </button>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <script src="js/script.js"></script>
+    </section>
+    <script src="js/script.js"></script>
 </body>
 </html>
+
