@@ -1,92 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos e Preços</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container my-5">
-        <div class="text-center mb-5">
-            <h1>Planos e Preços</h1>
-            <p>Escolha o plano que melhor se adapta às suas necessidades</p>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Plano Básico</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">R$29 <small class="text-muted">/ mês</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>10 usuários incluídos</li>
-                            <li>2 GB de armazenamento</li>
-                            <li>Suporte por email</li>
-                            <li>Acesso ao centro de ajuda</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Assinar</button>
-                    </div>
-                </div>
+    <section class="pricing-section">
+        <h1>Planos para todos os níveis de ambição</h1>
+        <div class="pricing-cards">
+            <div class="card">
+                <h2>Essential</h2>
+                <p class="price">$12.95/mês</p>
+                <p class="annual-price">$155.40/ano</p>
+                <ul class="features">
+                    <li>2 gráficos por aba</li>
+                    <li>5 indicadores por gráfico</li>
+                    <li>10K barras do histórico</li>
+                    <li>20 alertas de preço</li>
+                    <li>Sem anúncios</li>
+                </ul>
+                <a href="#" class="btn">Teste grátis por 30 dias</a>
             </div>
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Plano Padrão</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">R$59 <small class="text-muted">/ mês</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>20 usuários incluídos</li>
-                            <li>10 GB de armazenamento</li>
-                            <li>Suporte prioritário</li>
-                            <li>Acesso ao centro de ajuda</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-primary">Assinar</button>
-                    </div>
-                </div>
+            <div class="card">
+                <h2>Plus</h2>
+                <p class="price">$24.95/mês</p>
+                <p class="annual-price">$299.40/ano</p>
+                <ul class="features">
+                    <li>4 gráficos por aba</li>
+                    <li>10 indicadores por gráfico</li>
+                    <li>10K barras do histórico</li>
+                    <li>100 alertas de preço</li>
+                    <li>Sem anúncios</li>
+                </ul>
+                <a href="#" class="btn">Teste grátis por 30 dias</a>
             </div>
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Plano Premium</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">R$99 <small class="text-muted">/ mês</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>30 usuários incluídos</li>
-                            <li>50 GB de armazenamento</li>
-                            <li>Suporte 24/7</li>
-                            <li>Acesso ao centro de ajuda</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-primary">Assinar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Plano Empresarial</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">R$199 <small class="text-muted">/ mês</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Usuários ilimitados</li>
-                            <li>100 GB de armazenamento</li>
-                            <li>Suporte dedicado</li>
-                            <li>Acesso ao centro de ajuda</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-primary">Assinar</button>
-                    </div>
-                </div>
+            <div class="card">
+                <h2>Premium</h2>
+                <p class="price">$49.95/mês</p>
+                <p class="annual-price">$599.40/ano</p>
+                <ul class="features">
+                    <li>8 gráficos por aba</li>
+                    <li>25 indicadores por gráfico</li>
+                    <li>20K barras do histórico</li>
+                    <li>400 alertas de preço</li>
+                    <li>Sem anúncios</li>
+                </ul>
+                <a href="#" class="btn">Teste grátis por 30 dias</a>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    </section>
 </body>
 </html>

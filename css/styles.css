@@ -1,22 +1,72 @@
 body {
-    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-.card-header {
+.pricing-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.pricing-section h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #555;
+}
+
+.price {
+    font-size: 24px;
+    color: #333;
+}
+
+.annual-price {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.features {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    color: #555;
+}
+
+.features li {
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
     background-color: #007bff;
-    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
 }
 
-.card-title {
-    font-size: 2rem;
-}
-
-.btn-outline-primary {
-    border-color: #007bff;
-    color: #007bff;
-}
-
-.btn-outline-primary:hover {
-    background-color: #007bff;
-    color: white;
+.btn:hover {
+    background-color: #0056b3;
 }
