@@ -1,144 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Curso Online de Física</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha seu plano ideal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="container-fluid">
-        <ul>
-            <li><strong>Curso Online de Física</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#inscricao" role="button">Inscreva-se</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <h1>Curso Online de Física</h1>
-        <h2>Domine todos os conceitos da física com aulas completas e detalhadas</h2>
-        <p>Nosso curso aborda todos os temas de uma faculdade de física, preparando você para enfrentar todos os desafios em sua carreira.</p>
-    </header>
-
-    <main class="container">
-        <section id="planos">
-            <h2>Planos de Assinatura</h2>
-            <p>Escolha o plano que melhor se adapta às suas necessidades:</p>
-
-            <div class="toggle-container">
-                <span id="plan-type">Mensal</span>
-                <label class="toggle-button">
-                    <label for="plan-toggle">Toggle</label>
-                    <input type="checkbox" id="plan-toggle" onclick="togglePlans()">
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="plan-carousel" id="plan-carousel">
-                <!-- Plano Newton Mensal -->
-                <div class="plan" data-plan="mensal">
-                    <h3>Plano Newton</h3>
-                    <p class="price"><strong>R$ 19,90</strong></p>
-                    <ul>
-                        <li>Acesso a todas as aulas já gravadas</li>
-                        <li>Acesso às listas de exercícios</li>
-                        <li>Acesso aos materiais de estudo</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" role="button">Assine Agora</a>
-                </div>
-
-                <!-- Plano Einstein Mensal -->
-                <div class="plan" data-plan="mensal">
-                    <h3>Plano Einstein</h3>
-                    <p class="price"><strong>R$ 29,90</strong></p>
-                    <ul>
-                        <li>Inclui tudo do Plano Newton</li>
-                        <li>Acesso ao Grupo do WhatsApp</li>
-                        <li>Acesso ao Drive de +1TB do Curso</li>
-                        <li>Atendimento personalizado</li>
-                        <li>Lives mensais com os alunos</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" role="button">Assine Agora</a>
-                </div>
-
-                <!-- Plano Newton Anual -->
-                <div class="plan" data-plan="anual">
-                    <h3>Plano Newton</h3>
-                    <p class="price"><strong>R$ 199,90</strong></p>
-                    <ul>
-                        <li>Acesso a todas as aulas já gravadas</li>
-                        <li>Acesso às listas de exercícios</li>
-                        <li>Acesso aos materiais de estudo</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" role="button">Assine Agora</a>
-                </div>
-
-                <!-- Plano Einstein Anual -->
-                <div class="plan" data-plan="anual">
-                    <h3>Plano Einstein</h3>
-                    <p class="price"><strong>R$ 299,90</strong></p>
-                    <ul>
-                        <li>Inclui tudo do Plano Newton</li>
-                        <li>Acesso ao Grupo do WhatsApp</li>
-                        <li>Acesso ao Drive de +1TB do Curso</li>
-                        <li>Atendimento personalizado</li>
-                        <li>Lives mensais com os alunos</li>
-                    </ul>
-                    <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" role="button">Assine Agora</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <h2>Depoimentos</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/80" alt="Depoimento 1">
-                    <p>"Este curso mudou minha vida! As aulas são incríveis e os professores são muito atenciosos."</p>
-                    <div class="rating">★★★★★</div>
-                    <p><strong>João Silva</strong></p>
-                </div>
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/80" alt="Depoimento 2">
-                    <p>"Recomendo a todos que querem aprender física de verdade. O conteúdo é muito completo."</p>
-                    <div class="rating">★★★★★</div>
-                    <p><strong>Maria Oliveira</strong></p>
-                </div>
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/80" alt="Depoimento 3">
-                    <p>"A melhor decisão que tomei foi me inscrever neste curso. Vale cada centavo!"</p>
-                    <div class="rating">★★★★★</div>
-                    <p><strong>Carlos Pereira</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>Sobre o Professor</h2>
-            <div class="about">
-                <img src="https://via.placeholder.com/150" alt="Professor">
-                <p>Olá! Eu sou o Professor Fictício, especialista em física com mais de 20 anos de experiência. Minha missão é tornar a física acessível e interessante para todos. Junte-se a mim nesta jornada de aprendizado e descubra o fascinante mundo da física!</p>
-            </div>
-        </section>
-
-        <section id="inscricao" class="center-content">
-            <h2>Inscreva-se Agora</h2>
-            <p>Garanta sua vaga no nosso curso de física.</p>
-            <a href="https://chat.whatsapp.com/EgKB4qFArzFDzNVPCxFUod" role="button">Junte-se ao Grupo do WhatsApp</a>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Curso Online de Física. Todos os direitos reservados.</p>
-        <small><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></small>
-    </footer>
-
-    <script src="js/scripts.js"></script>
+  <h1>Escolha seu plano ideal</h1>
+  <p>Encontre o plano que melhor se adapta às suas necessidades.</p>
+  <div class="toggle-container">
+    <div class="toggle" onclick="togglePricing()">
+      <div class="toggle-switch"></div>
+    </div>
+  </div>
+  <div class="plan-container">
+    <div class="plan">
+      <h2>Plano Newton</h2>
+      <div class="price mensal">R$19,90/mês</div>
+      <div class="price anual" style="display: none;">R$199,90/ano</div>
+      <ul>
+        <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
+        <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
+        <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
+        <li class="unavailable"><span>&#10007;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
+        <li class="unavailable"><span>&#10007;</span> Acesso ao Drive de +1TB do Curso</li>
+        <li class="unavailable"><span>&#10007;</span> Atendimento personalizado</li>
+        <li class="unavailable"><span>&#10007;</span> Lives mensais com os alunos</li>
+      </ul>
+      <div class="button-container">
+        <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" class="mensal-link">Assinar</a>
+        <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" class="anual-link" style="display: none;">Assinar</a>
+      </div>
+    </div>
+    <div class="plan">
+      <h2>Plano Einstein</h2>
+      <div class="price mensal">R$29,90/mês</div>
+      <div class="price anual" style="display: none;">R$299,90/ano</div>
+      <ul>
+        <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
+        <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
+        <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
+        <li class="available"><span>&#10003;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
+        <li class="available"><span>&#10003;</span> Acesso ao Drive de +1TB do Curso</li>
+        <li class="available"><span>&#10003;</span> Atendimento personalizado</li>
+        <li class="available"><span>&#10003;</span> Lives mensais com os alunos</li>
+      </ul>
+      <div class="button-container">
+        <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" class="mensal-link">Assinar</a>
+        <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" class="anual-link" style="display: none;">Assinar</a>
+      </div>
+    </div>
+  </div>
+  <script src="js/scripts.js"></script> 
 </body>
 </html>
