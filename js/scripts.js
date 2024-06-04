@@ -1,27 +1,31 @@
-const switchElement = document.querySelector('.switch input[type="checkbox"]');
-const pricesNewton = document.querySelectorAll('.price')[0];
-const pricesEinstein = document.querySelectorAll('.price')[1];
-const monthlyPrices = [19.90, 29.90];
-const annualPrices = [199.90, 299.90];
+const planSwitch = document.getElementById('planSwitch');
+const plans = document.querySelectorAll('.plan');
 
-switchElement.addEventListener('change', () => {
-  const isChecked = switchElement.checked;
-  const newPrices = isChecked ? annualPrices : monthlyPrices;
-  const priceSuffix = isChecked ? '/ano' : '/mês';
+planSwitch.addEventListener('change', () => {
+  plans.forEach(plan => {
+    const planType = plan.dataset.plan;
+    const priceElement = plan.querySelector('.price .value');
+    const periodElement = plan.querySelector('.price .period');
+    const annualPriceElement = plan.querySelector('.annual-price');
 
-  pricesNewton.textContent = `R$${newPrices[0].toFixed(2)}`;
-  pricesEinstein.textContent = `R$${newPrices[1].toFixed(2)}`;
-
-  document.querySelectorAll('.text-gray-300').forEach((span, index) => {
-    span.textContent = priceSuffix;
-    if (index === 0 && isChecked) {
-      span.textContent += ' (Equivalente a R$19,90/mês)';
-    } else if (index === 1 && isChecked) {
-      span.textContent += ' (Equivalente a R$29,90/mês)';
+    if (planSwitch.checked) {
+      // Plano anual
+      if (planType === 'newton') {
+        priceElement.textContent = '199,90';
+      } else if (planType === 'einstein') {
+        priceElement.textContent = '299,90';
+      }
+      periodElement.textContent = '/ano';
+      annualPriceElement.style.display = 'block';
+    } else {
+      // Plano mensal
+      if (planType === 'newton') {
+        priceElement.textContent = '19,90';
+      } else if (planType === 'einstein') {
+        priceElement.textContent = '29,90';
+      }
+      periodElement.textContent = '/mês';
+      annualPriceElement.style.display = 'none';
     }
   });
-
-  const slider = document.querySelector('.slider');
-  slider.classList.toggle('translate-x-6', isChecked);
-  slider.classList.toggle('translate-x-1', !isChecked);
 });
