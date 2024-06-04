@@ -1,191 +1,175 @@
-/* Estilos gerais */
+/* Estilos personalizados */
 body {
-  font-family: 'Taviraj', serif;
-  background-color: #121212;
-  color: #fff;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Yeseva One', serif;
+.hero {
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x900/?physics') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 50px 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+.hero h1, .hero h2 {
+    margin: 0;
+    text-shadow: 2px 2px 4px #000000; /* Contorno preto */
 }
 
-/* Seção de preços */
-.pricing-section {
-  padding: 4rem 0;
+.hero h1, .hero h2, .hero p {
+    text-shadow: 2px 2px 4px #000000;
 }
 
-.pricing-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.pricing-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Toggle switch */
-.toggle-switch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.toggle-switch span {
-  font-size: 0.9rem;
-  margin: 0 0.5rem;
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #8b5cf6;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #8b5cf6;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* Planos de assinatura */
-.pricing-plans {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.plan-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    position: relative;
 }
 
 .plan {
-  border: 1px solid #333;
-  padding: 2rem;
-  border-radius: 8px;
-  background-color: #27272a;
-  transition: border-color 0.3s ease;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 420px;
+    max-width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .plan:hover {
-  border-color: #8b5cf6;
+    transform: scale(1.05);
 }
 
 .plan h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+    margin-top: 0;
 }
 
 .plan .price {
-  display: flex;
-  align-items: baseline;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    font-family: 'Arial Black', Gadget, sans-serif; /* Fonte mais grossa */
 }
 
-.plan .price .value {
-  font-weight: bold;
-  margin-right: 0.5rem;
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.plan .annual-price {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 1.5rem;
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
-.plan ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
+.toggle-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.plan ul li {
-  margin-bottom: 0.5rem;
-  color: #a1a1aa;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
 }
 
-.plan ul li i {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
 }
 
-.plan ul li .check {
-  color: #8b5cf6;
+input:checked + .slider {
+    background-color: #007bff;
 }
 
-.plan ul li .x {
-  color: #ef4444;
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
 
-.plan .subscribe-button {
-  background-color: #8b5cf6;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
 }
 
-.plan .subscribe-button:hover {
-  background-color: #a855f7;
+.testimonial {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial .rating {
+    color: gold;
+}
+
+.about {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.center-content a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .plan {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .toggle-container {
+        top: -10px;
+    }
 }
