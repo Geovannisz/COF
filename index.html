@@ -1,58 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escolha seu plano ideal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu plano ideal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Yeseva One', serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .toggle {
+            background-color: #444;
+            border-radius: 15px;
+            width: 70px;
+            height: 30px;
+            position: relative;
+            cursor: pointer;
+        }
+        .toggle::before {
+            content: 'Mensal';
+            position: absolute;
+            width: 50%;
+            text-align: center;
+            color: #888;
+            font-size: 0.8em;
+            font-weight: bold;
+            left: -50px;
+            top: 7px;
+        }
+        .toggle::after {
+            content: 'Anual';
+            position: absolute;
+            width: 50%;
+            text-align: center;
+            color: #888;
+            font-size: 0.8em;
+            font-weight: bold;
+            right: -50px;
+            top: 7px;
+        }
+        .toggle-switch {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            top: 2px;
+            left: 2px;
+            transition: left 0.3s;
+        }
+        .annual .toggle-switch {
+            left: 42px;
+        }
+        .plan-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .plan {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .plan h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .plan .price {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .plan ul li {
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        .plan ul li span {
+            margin-right: 10px;
+        }
+        .plan ul li.available span {
+            color: #8a2be2;
+        }
+        .plan ul li.unavailable {
+            color: #666;
+        }
+        .plan .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .plan .button-container a {
+            background-color: #8a2be2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <h1>Escolha seu plano ideal</h1>
-  <p>Encontre o plano que melhor se adapta às suas necessidades.</p>
-  <div class="toggle-container">
-    <div class="toggle" onclick="togglePricing()">
-      <div class="toggle-switch"></div>
+    <h1>Escolha seu plano ideal</h1>
+    <p>Encontre o plano que melhor se adapta às suas necessidades.</p>
+    <div class="toggle-container">
+        <div class="toggle" onclick="togglePricing()">
+            <div class="toggle-switch"></div>
+        </div>
     </div>
-  </div>
-  <div class="plan-container">
-    <div class="plan">
-      <h2>Plano Newton</h2>
-      <div class="price mensal">R$19,90/mês</div>
-      <div class="price anual" style="display: none;">R$199,90/ano</div>
-      <ul>
-        <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
-        <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
-        <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
-        <li class="unavailable"><span>&#10007;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
-        <li class="unavailable"><span>&#10007;</span> Acesso ao Drive de +1TB do Curso</li>
-        <li class="unavailable"><span>&#10007;</span> Atendimento personalizado</li>
-        <li class="unavailable"><span>&#10007;</span> Lives mensais com os alunos</li>
-      </ul>
-      <div class="button-container">
-        <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" class="mensal-link">Assinar</a>
-        <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" class="anual-link" style="display: none;">Assinar</a>
-      </div>
+    <div class="plan-container">
+        <div class="plan">
+            <h2>Plano Newton</h2>
+            <div class="price mensal">R$19,90/mês</div>
+            <div class="price anual" style="display: none;">R$199,90/ano</div>
+            <ul>
+                <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
+                <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
+                <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
+                <li class="unavailable"><span>&#10007;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
+                <li class="unavailable"><span>&#10007;</span> Acesso ao Drive de +1TB do Curso</li>
+                <li class="unavailable"><span>&#10007;</span> Atendimento personalizado</li>
+                <li class="unavailable"><span>&#10007;</span> Lives mensais com os alunos</li>
+            </ul>
+            <div class="button-container">
+                <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" class="mensal-link">Assinar</a>
+                <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" class="anual-link" style="display: none;">Assinar</a>
+            </div>
+        </div>
+        <div class="plan">
+            <h2>Plano Einstein</h2>
+            <div class="price mensal">R$29,90/mês</div>
+            <div class="price anual" style="display: none;">R$299,90/ano</div>
+            <ul>
+                <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
+                <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
+                <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
+                <li class="available"><span>&#10003;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
+                <li class="available"><span>&#10003;</span> Acesso ao Drive de +1TB do Curso</li>
+                <li class="available"><span>&#10003;</span> Atendimento personalizado</li>
+                <li class="available"><span>&#10003;</span> Lives mensais com os alunos</li>
+            </ul>
+            <div class="button-container">
+                <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" class="mensal-link">Assinar</a>
+                <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" class="anual-link" style="display: none;">Assinar</a>
+            </div>
+        </div>
     </div>
-    <div class="plan">
-      <h2>Plano Einstein</h2>
-      <div class="price mensal">R$29,90/mês</div>
-      <div class="price anual" style="display: none;">R$299,90/ano</div>
-      <ul>
-        <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
-        <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
-        <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
-        <li class="available"><span>&#10003;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
-        <li class="available"><span>&#10003;</span> Acesso ao Drive de +1TB do Curso</li>
-        <li class="available"><span>&#10003;</span> Atendimento personalizado</li>
-        <li class="available"><span>&#10003;</span> Lives mensais com os alunos</li>
-      </ul>
-      <div class="button-container">
-        <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" class="mensal-link">Assinar</a>
-        <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" class="anual-link" style="display: none;">Assinar</a>
-      </div>
-    </div>
-  </div>
-  <script src="js/scripts.js"></script> 
+    <script>
+        function togglePricing() {
+            const toggle = document.querySelector('.toggle');
+            const isAnnual = toggle.classList.toggle('annual');
+            document.querySelectorAll('.mensal').forEach(el => el.style.display = isAnnual ? 'none' : 'block');
+            document.querySelectorAll('.anual').forEach(el => el.style.display = isAnnual ? 'block' : 'none');
+            document.querySelectorAll('.mensal-link').forEach(el => el.style.display = isAnnual ? 'none' : 'block');
+            document.querySelectorAll('.anual-link').forEach(el => el.style.display = isAnnual ? 'block' : 'none');
+        }
+    </script>
 </body>
 </html>
