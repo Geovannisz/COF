@@ -42,7 +42,16 @@ Atenderei cada um de forma personalizada, auxiliando na correção das listas de
 
 Veja essa lista [aqui](https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md).
 
-## Autor
+## Autor - Geovanni Fernandes Garcia
+
+<table>
+<tr>
+<td width="60%">
+
+![Geovanni](https://github.com/Geovannisz/COF/assets/82838501/6afecba1-fa4a-4fcc-aaeb-f680fe607eff)
+
+</td>
+<td width="40%" style="vertical-align: top;">
 
 Sou um Físico formado pela USP, amo ensinar e aprender coisas novas. Minha paixão em dar aula nasceu na escola, quando ensinava meus amigos algum conteúdo logo antes da prova. E meu amor por aprender reside no fato de eu dedicar uma boa parte do meu esforço para fazer um curso de bacharelado em Física.
 
@@ -59,3 +68,8 @@ Além de ser medalhista em uma olimpíada de Física, já fui aprovado em concur
 - USP (pela FUVEST)
 
 Meu maior objetivo de vida é deixar um legado positivo para as pessoas que convivem/conviveram comigo, deixando um pedacinho meu no coração de cada uma delas, e eu decidi fazer isso transmitindo o meu conhecimento e fazendo contribuições diretas e indiretas à ciência.
+</td>
+</tr>
+</table>
+
+
