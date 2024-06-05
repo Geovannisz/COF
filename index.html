@@ -36,6 +36,7 @@
             height: 30px;
             position: relative;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .toggle::before {
             content: 'Mensal';
@@ -72,6 +73,9 @@
         .annual .toggle-switch {
             left: 42px;
         }
+        .annual {
+            background-color: #8a2be2; /* Azul quando anual */
+        }
         .plan-container {
             display: flex;
             justify-content: center;
@@ -84,6 +88,7 @@
             padding: 20px;
             width: 300px;
             text-align: center;
+            transition: box-shadow 0.3s; /* Adiciona uma transição suave */
         }
         .plan h2 {
             font-size: 1.5em;
@@ -122,6 +127,39 @@
             border-radius: 5px;
             text-decoration: none;
         }
+        .plan .price {
+            font-size: 2.4em;
+            margin: 20px 0;
+        }
+
+        /* Estilos para "/mês" e "/ano" */
+        .plan .price span {
+            font-size: 0.6em; /* Tamanho menor */
+            color: #ddd;     /* Cinza claro */
+        }
+
+        /* Estilos para os valores dos preços */
+        .plan .price strong {
+            font-weight: bold; /* Negrito */
+        }
+
+        /* Estilos padrão para o contorno e animação */
+        .plan:hover {
+            box-shadow: 0 0 5px 2px #fff;
+        }
+
+        /* Estilos para planos no modo anual */
+        .annual .plan:hover {
+            box-shadow: 0 0 5px 2px gold; /* Contorno dourado */
+        }
+
+        .button-container a { 
+            transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transições */
+        }
+        .button-container a:hover {
+            transform: translateY(-2px); /* Efeito de "elevar" ao passar o mouse */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
     </style>
 </head>
 <body>
@@ -135,8 +173,8 @@
     <div class="plan-container">
         <div class="plan">
             <h2>Plano Newton</h2>
-            <div class="price mensal">R$19,90/mês</div>
-            <div class="price anual" style="display: none;">R$199,90/ano</div>
+            <div class="price mensal"><strong>R$ 19,90</strong><span>/mês</span></div>
+            <div class="price anual" style="display: none;"><strong>R$ 199,90</strong><span>/ano</span></div>
             <ul>
                 <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
                 <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
@@ -153,8 +191,8 @@
         </div>
         <div class="plan">
             <h2>Plano Einstein</h2>
-            <div class="price mensal">R$29,90/mês</div>
-            <div class="price anual" style="display: none;">R$299,90/ano</div>
+            <div class="price mensal"><strong>R$ 29,90</strong><span>/mês</span></div>
+            <div class="price anual" style="display: none;"><strong>R$ 299,90</strong><span>/ano</span></div>
             <ul>
                 <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
                 <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
