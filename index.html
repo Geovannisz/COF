@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha seu plano ideal</title>
+    <title>Escolha seu plano ideal e Perguntas Frequentes</title>
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -131,34 +131,102 @@
             font-size: 2.4em;
             margin: 20px 0;
         }
-
         /* Estilos para "/mês" e "/ano" */
         .plan .price span {
             font-size: 0.6em; /* Tamanho menor */
             color: #ddd;     /* Cinza claro */
         }
-
         /* Estilos para os valores dos preços */
         .plan .price strong {
             font-weight: bold; /* Negrito */
         }
-
         /* Estilos padrão para o contorno e animação */
         .plan:hover {
             box-shadow: 0 0 5px 2px #fff;
         }
-
         /* Estilos para planos no modo anual */
         .annual .plan:hover {
             box-shadow: 0 0 5px 2px gold; /* Contorno dourado */
         }
-
         .button-container a { 
             transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transições */
         }
         .button-container a:hover {
             transform: translateY(-2px); /* Efeito de "elevar" ao passar o mouse */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
+        /* Estilo da linha horizontal */
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #fff;
+            margin: 40px 0;
+        }
+        /* Estilos do segundo código */
+        body.faq {
+            font-family: Arial, sans-serif;
+            background-color: #8A2BE2; /* Cor de fundo roxa */
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+        }
+        .header a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .faq-item {
+            background-color: #1b1b1b;
+            color: #8d8d8d; /* Cor do texto da resposta ajustada para um cinza levemente escuro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+        .faq-item h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #dddddd; /* Cor do título das perguntas */
+        }
+        .faq-item p {
+            font-size: 1em;
+            line-height: 1.5em;
+            hyphens: auto; /* Hifeniza automaticamente */
+        }
+        .link {
+            color: #8A2BE2; /* Cor roxa */
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -208,6 +276,63 @@
             </div>
         </div>
     </div>
+
+    <hr> <!-- Linha horizontal fina e branca -->
+
+    <div class="container">
+        <div class="header">
+            <h1>Está com dúvidas?</h1>
+            <p>Aqui estão as perguntas mais comuns, espero que sua dúvida esteja em uma delas, caso não, <a href="https://api.whatsapp.com/send/?phone=5512992615141&text=Estou+com+uma+d%C3%BAvida+sobre+o+Curso+Online+de+F%C3%ADsica&type=phone_number&app_absent=0" class="link">entre em contato</a> com a nossa equipe.</p>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h2>Como sei quais aulas já foram gravadas?</h2>
+                <p>Basta você acompanhar por <a href="https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md#aulas" class="link">este link</a> no nosso GitHub.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Quantas horas terá o curso na sua conclusão?</h2>
+                <p>A versão final do curso compreenderá 20 disciplinas principais e 6 disciplinas extras, cada uma compreendendo cerca de 40 aulas de duração média de 1h, isso nos dá mais de mil horas de conteúdo.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Para quem é destinado esse curso?</h2>
+                <p>Esse produto é direcionado para 2 tipos de pessoas, curiosos sobre a física e para estudantes de graduação de quaisquer cursos de exatas.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Quais as formas de pagamento?</h2>
+                <p>Aceitamos a maioria dos tipos de pagamento, seja Pix, Boleto Bancário, Crédito, Débito, PayPal, Google Pay ou Apple Pay.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Emite certificado de conclusão?</h2>
+                <p>Ainda não, pretendemos montar um certificado aprovado pelo MEC a nível de pós-graduação apenas após o final das gravações do curso.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Posso parcelar?</h2>
+                <p>Não, o formato de assinatura não permite parcelamento, em vez disso, temos opções de assinaturas mensais e anuais.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Posso assistir as aulas offline?</h2>
+                <p>Sim, usando o app da Hotmart você pode baixar as aulas e assisti-las sem internet depois, assim como faz com suas séries da Netflix.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Qual a previsão de conclusão do curso?</h2>
+                <p>O objetivo é concluir a gravação de uma disciplina a cada mês, dado o número de disciplinas, temos a projeção de conclusão até, no máximo, o ano de 2026.</p>
+            </div>
+            <div class="faq-item">
+                <h2>Como acessar o produto?</h2>
+                <p>Você receberá o acesso por email. O conteúdo será acessado ou baixado através de um computador, celular, tablet ou outro dispositivo digital. Você também pode acessar o produto comprando seguindo os seguintes passos:</p>
+                <ol>
+                    <li>Faça login na Hotmart clicando em 'Entrar'</li>
+                    <li>Acesse o menu lateral, clique em 'Minha conta'</li>
+                    <li>Clique em 'Minhas compras' e lá estarão todos os produtos que você já comprou!</li>
+                </ol>
+            </div>
+            <div class="faq-item">
+                <h2>Quais conhecimentos prévios devo ter para que consiga acompanhar o curso?</h2>
+                <p>Como no momento ainda não pretendemos abordar os assuntos de Pré-Cálculo, assume-se que o aluno já possua esse conhecimento bem estabelecido. No entanto, os alunos do "Plano Einstein" terão acesso à materiais de apoio no Drive do curso envolvendo conteúdos de ensino médio, o que o ajudará a acompanhar as aulas.</p>
+            </div>
+        </div>
+    </div>
+
     <script>
         function togglePricing() {
             const toggle = document.querySelector('.toggle');
