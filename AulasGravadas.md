@@ -163,7 +163,7 @@
 
 :movie_camera: 18: Velocidade Relativa
 
-:x: 19: A Lei da Inércia
+:movie_camera: 19: A Lei da Inércia
 
 :x: 20: A Segunda Lei de Newton
 
