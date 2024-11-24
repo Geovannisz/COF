@@ -68,7 +68,7 @@ Além de ser medalhista em uma olimpíada de Física, já fui aprovado em concur
 </tr>
 </table>
 
-Faço divulgação científica no meu canal no YouTube. O nome do canal é Dois Físicos e um Vetor e já alcançou mais de 450 mil pessoas pelo mundo.
+Faço divulgação científica no meu canal no YouTube. O nome do canal é Dois Físicos e um Vetor e já alcançou mais de 500 mil pessoas pelo mundo.
 
 Meu maior objetivo de vida é deixar um legado positivo para as pessoas que convivem/conviveram comigo, deixando um pedacinho meu no coração de cada uma delas, e eu decidi fazer isso transmitindo o meu conhecimento e fazendo contribuições diretas e indiretas à ciência.
 
