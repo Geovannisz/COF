@@ -78,7 +78,7 @@ body::before {
 }
 
 /* ===========================
-   Floating Physics Formulas
+   Floating Physics Elements
    =========================== */
 .physics-bg {
   position: fixed;
@@ -92,18 +92,50 @@ body::before {
   position: absolute;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-style: italic;
-  color: rgba(138, 43, 226, 0.07);
-  font-size: clamp(0.9rem, 2vw, 1.3rem);
-  animation: floatSymbol 18s ease-in-out infinite;
+  color: rgba(138, 43, 226, 0.13);
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  animation: floatSymbol 20s ease-in-out infinite;
   user-select: none;
   white-space: nowrap;
 }
 
+.physics-graphic {
+  position: absolute;
+  color: rgba(138, 43, 226, 0.12);
+  animation: floatGraphic 22s ease-in-out infinite;
+  user-select: none;
+}
+
+.physics-graphic--wave {
+  animation: floatWave 18s ease-in-out infinite;
+}
+
 @keyframes floatSymbol {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+  25%      { transform: translateY(-14px) rotate(1.5deg); opacity: 1; }
+  50%      { transform: translateY(-6px) rotate(-0.5deg); opacity: 0.7; }
+  75%      { transform: translateY(-18px) rotate(1deg); opacity: 0.9; }
+}
+
+@keyframes floatGraphic {
   0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
-  25%      { transform: translateY(-18px) rotate(2deg); opacity: 0.9; }
-  50%      { transform: translateY(-8px) rotate(-1deg); opacity: 0.6; }
-  75%      { transform: translateY(-22px) rotate(1.5deg); opacity: 1; }
+  25%      { transform: translateY(-12px) rotate(8deg); opacity: 0.85; }
+  50%      { transform: translateY(-4px) rotate(-4deg); opacity: 0.6; }
+  75%      { transform: translateY(-16px) rotate(6deg); opacity: 0.8; }
+}
+
+@keyframes floatWave {
+  0%, 100% { transform: translateY(0) scaleX(1); opacity: 0.5; }
+  25%      { transform: translateY(-10px) scaleX(1.05); opacity: 0.9; }
+  50%      { transform: translateY(-4px) scaleX(0.98); opacity: 0.6; }
+  75%      { transform: translateY(-14px) scaleX(1.03); opacity: 0.8; }
+}
+
+/* Hide physics decoration on small screens where margins disappear */
+@media (max-width: 1024px) {
+  .physics-bg {
+    display: none;
+  }
 }
 
 /* ===========================
@@ -730,7 +762,8 @@ body::before {
    Reduced Motion
    =========================== */
 @media (prefers-reduced-motion: reduce) {
-  .physics-symbol {
+  .physics-symbol,
+  .physics-graphic {
     animation: none;
     opacity: 0.5;
   }
