@@ -725,3 +725,24 @@ body::before {
     padding: 6px 14px;
   }
 }
+
+/* ===========================
+   Reduced Motion
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+  .physics-symbol {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .hero h1::after {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
