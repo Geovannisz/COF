@@ -7,340 +7,187 @@
     <meta name="keywords" content="curso de física, curso de matemática, aulas online, física para universitários, matemática para universitários, cálculo, álgebra linear, física geral, mecânica, eletromagnetismo, física quântica, astronomia, geovannisz, dois físicos e um vetor">
     <title>Escolha seu plano ideal e Perguntas Frequentes</title>
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-family: 'Yeseva One', serif;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-        .toggle-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .toggle {
-            background-color: #444;
-            border-radius: 15px;
-            width: 70px;
-            height: 30px;
-            position: relative;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .toggle::before {
-            content: 'Mensal';
-            position: absolute;
-            width: 50%;
-            text-align: center;
-            color: #888;
-            font-size: 0.8em;
-            font-weight: bold;
-            left: -50px;
-            top: 7px;
-        }
-        .toggle::after {
-            content: 'Anual';
-            position: absolute;
-            width: 50%;
-            text-align: center;
-            color: #888;
-            font-size: 0.8em;
-            font-weight: bold;
-            right: -50px;
-            top: 7px;
-        }
-        .toggle-switch {
-            position: absolute;
-            background-color: #fff;
-            border-radius: 50%;
-            width: 26px;
-            height: 26px;
-            top: 2px;
-            left: 2px;
-            transition: left 0.3s;
-        }
-        .annual .toggle-switch {
-            left: 42px;
-        }
-        .annual {
-            background-color: #8a2be2; /* Azul quando anual */
-        }
-        .plan-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .plan {
-            background-color: #111;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            transition: box-shadow 0.3s; /* Adiciona uma transição suave */
-        }
-        .plan h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .plan .price {
-            font-size: 2em;
-            margin: 20px 0;
-        }
-        .plan ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-        }
-        .plan ul li {
-            margin: 10px 0;
-            font-size: 0.9em;
-        }
-        .plan ul li span {
-            margin-right: 10px;
-        }
-        .plan ul li.available span {
-            color: #8a2be2;
-        }
-        .plan ul li.unavailable {
-            color: #666;
-        }
-        .plan .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .plan .button-container a {
-            background-color: #8a2be2;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .plan .price {
-            font-size: 2.4em;
-            margin: 20px 0;
-        }
-        /* Estilos para "/mês" e "/ano" */
-        .plan .price span {
-            font-size: 0.6em; /* Tamanho menor */
-            color: #ddd;     /* Cinza claro */
-        }
-        /* Estilos para os valores dos preços */
-        .plan .price strong {
-            font-weight: bold; /* Negrito */
-        }
-        /* Estilos padrão para o contorno e animação */
-        .plan:hover {
-            box-shadow: 0 0 5px 2px #fff;
-        }
-        /* Estilos para planos no modo anual */
-        .annual .plan:hover {
-            box-shadow: 0 0 5px 2px gold; /* Contorno dourado */
-        }
-        .button-container a { 
-            transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transições */
-        }
-        .button-container a:hover {
-            transform: translateY(-2px); /* Efeito de "elevar" ao passar o mouse */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-        }
-        /* Estilo da linha horizontal */
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #fff;
-            margin: 40px 0;
-        }
-        /* Estilos do segundo código */
-        body.faq {
-            font-family: Arial, sans-serif;
-            background-color: #8A2BE2; /* Cor de fundo roxa */
-            margin: 0;
-            padding: 0;
-            color: #ffffff;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .header h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        .header p {
-            font-size: 1.2em;
-        }
-        .header a {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .faq-item {
-            background-color: #1b1b1b;
-            color: #8d8d8d; /* Cor do texto da resposta ajustada para um cinza levemente escuro */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-            hyphens: auto;
-        }
-        .faq-item h2 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            color: #dddddd; /* Cor do título das perguntas */
-        }
-        .faq-item p {
-            font-size: 1em;
-            line-height: 1.5em;
-        }
-        .link {
-            color: #8A2BE2; /* Cor roxa */
-            text-decoration: none;
-        }
-        .link:hover {
-            text-decoration: underline;
-        }
-        ol {
-            padding-left: 20px;
-        }
-        @media (max-width: 768px) {
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* Estilos para o rodapé */
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #111;
-            color: #fff;
-            font-size: 0.9em;
-            border-top: 1px solid #444;
-            margin-top: 40px;
-        }
-        .footer a {
-            color: #8a2be2;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Escolha seu plano ideal</h1>
-    <p>Encontre o plano que melhor se adapta às suas necessidades.</p>
-    <div class="toggle-container">
-        <div class="toggle" onclick="togglePricing()">
-            <div class="toggle-switch"></div>
-        </div>
+
+    <!-- ========== Floating Physics Elements (edges only) ========== -->
+    <div class="physics-bg" aria-hidden="true">
+        <!-- Left edge formulas -->
+        <span class="physics-symbol" style="top:3%;left:2%;animation-delay:0s;">E = mc²</span>
+        <span class="physics-symbol" style="top:14%;left:5%;animation-delay:2.5s;">F = ma</span>
+        <span class="physics-symbol" style="top:26%;left:1%;animation-delay:4s;">∇ × B</span>
+        <span class="physics-symbol" style="top:38%;left:4%;animation-delay:1s;">∮ E·dl</span>
+        <span class="physics-symbol" style="top:50%;left:2%;animation-delay:3s;">ψ(x,t)</span>
+        <span class="physics-symbol" style="top:62%;left:6%;animation-delay:5s;">λ = h/p</span>
+        <span class="physics-symbol" style="top:74%;left:1%;animation-delay:2s;">ΔxΔp ≥ ℏ/2</span>
+        <span class="physics-symbol" style="top:86%;left:5%;animation-delay:4.5s;">S = k ln Ω</span>
+        <span class="physics-symbol" style="top:95%;left:3%;animation-delay:0.5s;">∂²ψ/∂t²</span>
+
+        <!-- Right edge formulas -->
+        <span class="physics-symbol" style="top:6%;right:2%;animation-delay:1.5s;">Σ F = dp/dt</span>
+        <span class="physics-symbol" style="top:18%;right:4%;animation-delay:3.5s;">∇²φ = -ρ/ε₀</span>
+        <span class="physics-symbol" style="top:30%;right:1%;animation-delay:0.5s;">V = IR</span>
+        <span class="physics-symbol" style="top:42%;right:5%;animation-delay:2s;">p = mv</span>
+        <span class="physics-symbol" style="top:54%;right:2%;animation-delay:4s;">E = hf</span>
+        <span class="physics-symbol" style="top:66%;right:6%;animation-delay:1s;">PV = nRT</span>
+        <span class="physics-symbol" style="top:78%;right:3%;animation-delay:3s;">ω = 2πf</span>
+        <span class="physics-symbol" style="top:88%;right:1%;animation-delay:5s;">∇·E = ρ/ε₀</span>
+        <span class="physics-symbol" style="top:97%;right:5%;animation-delay:2.5s;">τ = r × F</span>
+
+        <!-- SVG graphical elements — left edge -->
+        <svg class="physics-graphic" style="top:8%;left:1%;" width="60" height="60" viewBox="0 0 60 60">
+            <ellipse cx="30" cy="30" rx="28" ry="10" fill="none" stroke="currentColor" stroke-width="1"/>
+            <ellipse cx="30" cy="30" rx="28" ry="10" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(60 30 30)"/>
+            <ellipse cx="30" cy="30" rx="28" ry="10" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(120 30 30)"/>
+            <circle cx="30" cy="30" r="3" fill="currentColor"/>
+        </svg>
+        <svg class="physics-graphic" style="top:35%;left:3%;" width="50" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="22" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/>
+            <circle cx="25" cy="5" r="3" fill="currentColor"/>
+        </svg>
+        <svg class="physics-graphic physics-graphic--wave" style="top:58%;left:0%;" width="80" height="30" viewBox="0 0 80 30">
+            <path d="M0,15 Q10,0 20,15 Q30,30 40,15 Q50,0 60,15 Q70,30 80,15" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <svg class="physics-graphic" style="top:80%;left:2%;" width="44" height="44" viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="22" cy="22" r="12" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2"/>
+            <circle cx="22" cy="22" r="4" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="22" cy="2" r="2.5" fill="currentColor"/>
+            <circle cx="34" cy="22" r="2" fill="currentColor"/>
+        </svg>
+
+        <!-- SVG graphical elements — right edge -->
+        <svg class="physics-graphic" style="top:12%;right:2%;" width="55" height="55" viewBox="0 0 55 55">
+            <ellipse cx="27" cy="27" rx="25" ry="9" fill="none" stroke="currentColor" stroke-width="1"/>
+            <ellipse cx="27" cy="27" rx="25" ry="9" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(60 27 27)"/>
+            <ellipse cx="27" cy="27" rx="25" ry="9" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(120 27 27)"/>
+            <circle cx="27" cy="27" r="3" fill="currentColor"/>
+        </svg>
+        <svg class="physics-graphic physics-graphic--wave" style="top:40%;right:1%;" width="70" height="28" viewBox="0 0 70 28">
+            <path d="M0,14 Q8.75,0 17.5,14 Q26.25,28 35,14 Q43.75,0 52.5,14 Q61.25,28 70,14" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <svg class="physics-graphic" style="top:60%;right:3%;" width="48" height="48" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/>
+            <circle cx="24" cy="4" r="2.5" fill="currentColor"/>
+            <circle cx="42" cy="30" r="2" fill="currentColor"/>
+        </svg>
+        <svg class="physics-graphic" style="top:82%;right:1%;" width="50" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="22" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="25" cy="25" r="14" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2"/>
+            <circle cx="25" cy="25" r="6" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="25" cy="3" r="2.5" fill="currentColor"/>
+            <circle cx="13" cy="25" r="2" fill="currentColor"/>
+            <circle cx="25" cy="37" r="2" fill="currentColor"/>
+        </svg>
     </div>
+
+    <!-- ========== Hero / Pricing ========== -->
+    <section class="hero">
+        <h1>Escolha seu plano ideal</h1>
+        <p>Encontre o plano que melhor se adapta às suas necessidades.</p>
+
+        <div class="toggle-container">
+            <span class="toggle-label active" id="label-mensal">Mensal</span>
+            <div class="toggle" id="pricing-toggle" onclick="togglePricing()">
+                <div class="toggle-switch"></div>
+            </div>
+            <span class="toggle-label" id="label-anual">Anual</span>
+            <span class="annual-badge">Economize</span>
+        </div>
+    </section>
+
     <div class="plan-container">
-        <div class="plan">
+        <!-- Plano Newton -->
+        <div class="plan reveal">
             <h2>Plano Newton</h2>
+            <p class="plan-description">Ideal para começar seus estudos</p>
             <div class="price mensal"><strong>R$ 19,90</strong><span>/mês</span></div>
-            <div class="price anual" style="display: none;"><strong>R$ 199,90</strong><span>/ano</span></div>
+            <div class="price anual" style="display:none;"><strong>R$ 199,90</strong><span>/ano</span></div>
             <ul>
-                <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
-                <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
-                <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
-                <li class="unavailable"><span>&#10007;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
-                <li class="unavailable"><span>&#10007;</span> Acesso ao Drive de +1TB do Curso</li>
-                <li class="unavailable"><span>&#10007;</span> Atendimento personalizado</li>
-                <li class="unavailable"><span>&#10007;</span> Lives mensais com os alunos</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso a todas as aulas já gravadas</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso às listas de exercícios</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso aos materiais de estudo</li>
+                <li class="unavailable"><span class="icon">&#10007;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
+                <li class="unavailable"><span class="icon">&#10007;</span> Acesso ao Drive de +1TB do Curso</li>
+                <li class="unavailable"><span class="icon">&#10007;</span> Atendimento personalizado</li>
+                <li class="unavailable"><span class="icon">&#10007;</span> Lives mensais com os alunos</li>
             </ul>
-            <div class="button-container">
-                <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" class="mensal-link">Assinar</a>
-                <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" class="anual-link" style="display: none;">Assinar</a>
+            <div>
+                <a href="https://pay.hotmart.com/U75748946G?off=58n0up7d" class="btn-outline mensal-link">Assinar</a>
+                <a href="https://pay.hotmart.com/U75748946G?off=g94u3qd9" class="btn-outline anual-link" style="display:none;">Assinar</a>
             </div>
         </div>
-        <div class="plan">
+
+        <!-- Plano Einstein -->
+        <div class="plan featured reveal">
             <h2>Plano Einstein</h2>
+            <p class="plan-description">Experiência completa com suporte total</p>
             <div class="price mensal"><strong>R$ 29,90</strong><span>/mês</span></div>
-            <div class="price anual" style="display: none;"><strong>R$ 299,90</strong><span>/ano</span></div>
+            <div class="price anual" style="display:none;"><strong>R$ 299,90</strong><span>/ano</span></div>
             <ul>
-                <li class="available"><span>&#10003;</span> Acesso a todas as aulas já gravadas</li>
-                <li class="available"><span>&#10003;</span> Acesso às listas de exercícios</li>
-                <li class="available"><span>&#10003;</span> Acesso aos materiais de estudo</li>
-                <li class="available"><span>&#10003;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
-                <li class="available"><span>&#10003;</span> Acesso ao Drive de +1TB do Curso</li>
-                <li class="available"><span>&#10003;</span> Atendimento personalizado</li>
-                <li class="available"><span>&#10003;</span> Lives mensais com os alunos</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso a todas as aulas já gravadas</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso às listas de exercícios</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso aos materiais de estudo</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso ao Grupo de Dúvidas do WhatsApp</li>
+                <li class="available"><span class="icon">&#10003;</span> Acesso ao Drive de +1TB do Curso</li>
+                <li class="available"><span class="icon">&#10003;</span> Atendimento personalizado</li>
+                <li class="available"><span class="icon">&#10003;</span> Lives mensais com os alunos</li>
             </ul>
-            <div class="button-container">
-                <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" class="mensal-link">Assinar</a>
-                <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" class="anual-link" style="display: none;">Assinar</a>
+            <div>
+                <a href="https://pay.hotmart.com/U75748946G?off=nl9mm15d" class="btn-primary mensal-link">Assinar</a>
+                <a href="https://pay.hotmart.com/U75748946G?off=3v7wxjqn" class="btn-primary anual-link" style="display:none;">Assinar</a>
             </div>
         </div>
     </div>
 
-    <hr> <!-- Add a separator line -->
-    <div class="curriculum-container" style="padding: 20px 0; text-align: center;">
-        <h2 style="font-family: 'Yeseva One', serif; font-size: 2.2em; margin-bottom: 20px;">Conteúdo do Curso</h2>
-        <p style="font-size: 1.1em; max-width: 800px; margin: 0 auto 20px;">Nosso curso abrange uma vasta gama de tópicos em Física e Matemática, projetado para fornecer uma base sólida e aprofundada. Explore desde os fundamentos até conceitos avançados.</p>
-        <div class="subject-areas" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 20px;">
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Cálculo Diferencial e Integral</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Mecânica Clássica</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Álgebra Linear</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Eletromagnetismo</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Física Moderna</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Astronomia e Astrofísica</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">E Muito Mais!</span>
+    <!-- ========== Curriculum ========== -->
+    <hr class="divider">
+    <section class="section curriculum-container reveal">
+        <h2 class="section-title">Conteúdo do Curso</h2>
+        <p class="section-subtitle">Nosso curso abrange uma vasta gama de tópicos em Física e Matemática, projetado para fornecer uma base sólida e aprofundada. Explore desde os fundamentos até conceitos avançados.</p>
+        <div class="subject-tags">
+            <span class="subject-tag">Cálculo Diferencial e Integral</span>
+            <span class="subject-tag">Mecânica Clássica</span>
+            <span class="subject-tag">Álgebra Linear</span>
+            <span class="subject-tag">Eletromagnetismo</span>
+            <span class="subject-tag">Física Moderna</span>
+            <span class="subject-tag">Astronomia e Astrofísica</span>
+            <span class="subject-tag">E Muito Mais!</span>
         </div>
-        <p style="font-size: 1em;">Para ver a lista completa de disciplinas e aulas planejadas, gravadas e disponíveis, acesse nosso sumário detalhado:</p>
-        <a href="https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md" target="_blank" class="button-container" style="display: inline-block; background-color: #8a2be2; color: #fff; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-size: 1.1em; margin-top: 10px; transition: transform 0.3s, box-shadow 0.3s;">Ver Sumário Completo das Aulas</a>
-    </div>
+        <p class="section-subtitle">Para ver a lista completa de disciplinas e aulas planejadas, gravadas e disponíveis, acesse nosso sumário detalhado:</p>
+        <a href="https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md" target="_blank" class="btn-primary">Ver Sumário Completo das Aulas</a>
+    </section>
 
-    <hr> <!-- Add a separator line -->
-    <div class="testimonials-container" style="padding: 20px 0;">
-        <h2 style="font-family: 'Yeseva One', serif; font-size: 2.2em; margin-bottom: 30px;">O que dizem nossos alunos?</h2>
-        <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div class="testimonial-item" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                <p style="font-style: italic; color: #ddd; margin-bottom: 10px;">"Este curso transformou minha compreensão da física! As explicações são claras e os exemplos práticos ajudam muito."</p>
-                <p style="font-weight: bold; color: #8a2be2;">- João Silva, Estudante de Engenharia</p>
+    <!-- ========== Testimonials ========== -->
+    <hr class="divider">
+    <section class="section reveal">
+        <h2 class="section-title">O que dizem nossos alunos?</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon">&ldquo;</div>
+                <p class="quote-text">Este curso transformou minha compreensão da física! As explicações são claras e os exemplos práticos ajudam muito.</p>
+                <p class="quote-author">— João Silva, Estudante de Engenharia</p>
             </div>
-            <div class="testimonial-item" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                <p style="font-style: italic; color: #ddd; margin-bottom: 10px;">"Finalmente encontrei um lugar que ensina física de verdade, desde o básico até os tópicos avançados. Recomendo!"</p>
-                <p style="font-weight: bold; color: #8a2be2;">- Maria Oliveira, Entusiasta da Ciência</p>
+            <div class="testimonial-card">
+                <div class="quote-icon">&ldquo;</div>
+                <p class="quote-text">Finalmente encontrei um lugar que ensina física de verdade, desde o básico até os tópicos avançados. Recomendo!</p>
+                <p class="quote-author">— Maria Oliveira, Entusiasta da Ciência</p>
             </div>
-            <div class="testimonial-item" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                <p style="font-style: italic; color: #ddd; margin-bottom: 10px;">"O material de apoio e as listas de exercícios são excelentes para fixar o conteúdo. Vale cada centavo!"</p>
-                <p style="font-weight: bold; color: #8a2be2;">- Carlos Pereira, Desenvolvedor de Software</p>
+            <div class="testimonial-card">
+                <div class="quote-icon">&ldquo;</div>
+                <p class="quote-text">O material de apoio e as listas de exercícios são excelentes para fixar o conteúdo. Vale cada centavo!</p>
+                <p class="quote-author">— Carlos Pereira, Desenvolvedor de Software</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <hr> <!-- Linha horizontal fina e branca -->
+    <!-- ========== FAQ ========== -->
+    <hr class="divider">
+    <section class="section faq-container reveal">
+        <h2 class="section-title">Está com dúvidas?</h2>
+        <p class="section-subtitle faq-header">Aqui estão as perguntas mais comuns. Caso não encontre sua dúvida, <a href="https://api.whatsapp.com/send/?phone=5512992615141&text=Estou+com+uma+d%C3%BAvida+sobre+o+Curso+Online+de+F%C3%ADsica&type=phone_number&app_absent=0">entre em contato</a> com a nossa equipe.</p>
 
-    <div class="container">
-        <div class="header">
-            <h2>Está com dúvidas?</h2>
-            <p>Aqui estão as perguntas mais comuns, espero que sua dúvida esteja em uma delas, caso não, <a href="https://api.whatsapp.com/send/?phone=5512992615141&text=Estou+com+uma+d%C3%BAvida+sobre+o+Curso+Online+de+F%C3%ADsica&type=phone_number&app_absent=0" class="link">entre em contato</a> com a nossa equipe.</p>
-        </div>
         <div class="faq-grid">
             <div class="faq-item">
                 <h3>Como sei quais aulas já foram gravadas?</h3>
@@ -388,32 +235,69 @@
                 <p>Como no momento ainda não pretendemos abordar os assuntos de Pré-Cálculo, assume-se que o aluno já possua esse conhecimento bem estabelecido. No entanto, os alunos do "Plano Einstein" terão acesso à materiais de apoio no Drive do curso envolvendo conteúdos de ensino médio, o que o ajudará a acompanhar as aulas.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="footer" style="padding: 20px; background-color: #111; color: #fff; font-size: 0.9em; border-top: 1px solid #444; margin-top: 40px; text-align: center;">
-        <div class="social-share" style="margin-bottom: 15px;">
-            <p style="margin-bottom: 8px; font-size: 1em;">Compartilhe nosso curso:</p>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL_HERE" target="_blank" style="margin: 0 8px; text-decoration: none; color: #8a2be2; font-weight: bold; font-size: 0.95em;">Facebook</a>
-            <a href="https://twitter.com/intent/tweet?url=YOUR_PAGE_URL_HERE&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank" style="margin: 0 8px; text-decoration: none; color: #8a2be2; font-weight: bold; font-size: 0.95em;">Twitter</a>
-            <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20YOUR_PAGE_URL_HERE" target="_blank" style="margin: 0 8px; text-decoration: none; color: #8a2be2; font-weight: bold; font-size: 0.95em;">WhatsApp</a>
+    <!-- ========== Footer ========== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="share-heading">Compartilhe nosso curso:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F" target="_blank" title="Facebook" aria-label="Compartilhar no Facebook">f</a>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank" title="Twitter" aria-label="Compartilhar no Twitter">𝕏</a>
+                <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F" target="_blank" title="WhatsApp" aria-label="Compartilhar no WhatsApp">w</a>
+            </div>
+            <a href="mailto:geovanni@usp.br" class="contact-link">geovanni@usp.br</a>
+            <p class="rights">&copy; 2024 Dois Físicos e um Vetor. Todos os direitos reservados.</p>
         </div>
-        <div class="contact" style="margin-bottom: 10px;">
-            <a href="mailto:geovanni@alumni.usp.br" style="color: #8a2be2; text-decoration: none;">Contato: geovanni@alumni.usp.br</a>
-        </div>
-        <div class="rights">
-            &copy; 2024 Dois Físicos e um Vetor.<br>Todos os direitos reservados.
-        </div>
-    </div>
+    </footer>
 
     <script>
         function togglePricing() {
-            const toggle = document.querySelector('.toggle');
+            const toggle = document.getElementById('pricing-toggle');
             const isAnnual = toggle.classList.toggle('annual');
+            const lblMensal = document.getElementById('label-mensal');
+            const lblAnual = document.getElementById('label-anual');
+
+            lblMensal.classList.toggle('active', !isAnnual);
+            lblAnual.classList.toggle('active', isAnnual);
+
             document.querySelectorAll('.mensal').forEach(el => el.style.display = isAnnual ? 'none' : 'block');
             document.querySelectorAll('.anual').forEach(el => el.style.display = isAnnual ? 'block' : 'none');
-            document.querySelectorAll('.mensal-link').forEach(el => el.style.display = isAnnual ? 'none' : 'block');
-            document.querySelectorAll('.anual-link').forEach(el => el.style.display = isAnnual ? 'block' : 'none');
+            document.querySelectorAll('.mensal-link').forEach(el => el.style.display = isAnnual ? 'none' : 'inline-block');
+            document.querySelectorAll('.anual-link').forEach(el => el.style.display = isAnnual ? 'inline-block' : 'none');
         }
+
+        /* Scroll-reveal animation */
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        /* Plan card interactive glow + tilt on mouse move */
+        document.querySelectorAll('.plan').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+
+                card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+                card.style.setProperty('--glow-x', x + 'px');
+                card.style.setProperty('--glow-y', y + 'px');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
     </script>
 </body>
 </html>
