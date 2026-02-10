@@ -496,8 +496,6 @@ body::before {
   font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.65;
-  text-align: justify;
-  hyphens: auto;
 }
 
 .faq-item ol {
