@@ -78,12 +78,43 @@ body::before {
 }
 
 /* ===========================
+   Floating Physics Formulas
+   =========================== */
+.physics-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.physics-symbol {
+  position: absolute;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  color: rgba(138, 43, 226, 0.07);
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  animation: floatSymbol 18s ease-in-out infinite;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@keyframes floatSymbol {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+  25%      { transform: translateY(-18px) rotate(2deg); opacity: 0.9; }
+  50%      { transform: translateY(-8px) rotate(-1deg); opacity: 0.6; }
+  75%      { transform: translateY(-22px) rotate(1.5deg); opacity: 1; }
+}
+
+/* ===========================
    Section Utility
    =========================== */
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 60px 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title {
@@ -119,6 +150,8 @@ body::before {
 .hero {
   text-align: center;
   padding: 80px 24px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -129,6 +162,26 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+/* Decorative atom orbital around hero heading */
+.hero h1::after {
+  content: '⚛';
+  position: absolute;
+  font-size: 0.4em;
+  top: -0.3em;
+  right: -0.8em;
+  -webkit-text-fill-color: var(--primary-light);
+  opacity: 0.5;
+  animation: atomSpin 6s linear infinite;
+}
+
+@keyframes atomSpin {
+  0%   { transform: rotate(0deg) scale(1); opacity: 0.4; }
+  50%  { transform: rotate(180deg) scale(1.15); opacity: 0.7; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.4; }
 }
 
 .hero p {
@@ -214,6 +267,8 @@ body::before {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .plan {
@@ -227,12 +282,35 @@ body::before {
   width: 340px;
   text-align: center;
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  overflow: hidden;
+  --glow-x: 50%;
+  --glow-y: 50%;
+}
+
+.plan::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    300px circle at var(--glow-x) var(--glow-y),
+    rgba(138, 43, 226, 0.12),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.plan:hover::after {
+  opacity: 1;
 }
 
 .plan:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-glow);
-  border-color: rgba(138, 43, 226, 0.3);
+  box-shadow:
+    var(--shadow-glow),
+    0 0 40px rgba(138, 43, 226, 0.1);
+  border-color: rgba(138, 43, 226, 0.35);
 }
 
 .plan.featured {
@@ -523,6 +601,8 @@ body::before {
   margin-top: 60px;
   padding: 40px 24px 32px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-inner {

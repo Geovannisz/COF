@@ -11,6 +11,22 @@
 </head>
 <body>
 
+    <!-- ========== Floating Physics Formulas ========== -->
+    <div class="physics-bg" aria-hidden="true">
+        <span class="physics-symbol" style="top:5%;left:8%;animation-delay:0s;">E = mc²</span>
+        <span class="physics-symbol" style="top:15%;left:85%;animation-delay:2s;">F = ma</span>
+        <span class="physics-symbol" style="top:30%;left:3%;animation-delay:4s;">∇ × B</span>
+        <span class="physics-symbol" style="top:45%;left:92%;animation-delay:1s;">ψ(x,t)</span>
+        <span class="physics-symbol" style="top:60%;left:6%;animation-delay:3s;">∮ E·dl</span>
+        <span class="physics-symbol" style="top:75%;left:88%;animation-delay:5s;">ΔxΔp ≥ ℏ/2</span>
+        <span class="physics-symbol" style="top:85%;left:12%;animation-delay:2.5s;">λ = h/p</span>
+        <span class="physics-symbol" style="top:25%;left:50%;animation-delay:3.5s;">∂²ψ/∂t²</span>
+        <span class="physics-symbol" style="top:55%;left:45%;animation-delay:1.5s;">Σ F = dp/dt</span>
+        <span class="physics-symbol" style="top:90%;left:55%;animation-delay:4.5s;">S = k ln Ω</span>
+        <span class="physics-symbol" style="top:10%;left:35%;animation-delay:0.5s;">⚛</span>
+        <span class="physics-symbol" style="top:70%;left:70%;animation-delay:2.8s;">∇²φ = -ρ/ε₀</span>
+    </div>
+
     <!-- ========== Hero / Pricing ========== -->
     <section class="hero">
         <h1>Escolha seu plano ideal</h1>
@@ -171,11 +187,11 @@
         <div class="footer-inner">
             <p class="share-heading">Compartilhe nosso curso:</p>
             <div class="social-links">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL_HERE" target="_blank" title="Facebook" aria-label="Compartilhar no Facebook">f</a>
-                <a href="https://twitter.com/intent/tweet?url=YOUR_PAGE_URL_HERE&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank" title="Twitter" aria-label="Compartilhar no Twitter">𝕏</a>
-                <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20YOUR_PAGE_URL_HERE" target="_blank" title="WhatsApp" aria-label="Compartilhar no WhatsApp">w</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F" target="_blank" title="Facebook" aria-label="Compartilhar no Facebook">f</a>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank" title="Twitter" aria-label="Compartilhar no Twitter">𝕏</a>
+                <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F" target="_blank" title="WhatsApp" aria-label="Compartilhar no WhatsApp">w</a>
             </div>
-            <a href="mailto:geovanni@alumni.usp.br" class="contact-link">geovanni@alumni.usp.br</a>
+            <a href="mailto:geovanni@usp.br" class="contact-link">geovanni@usp.br</a>
             <p class="rights">&copy; 2024 Dois Físicos e um Vetor. Todos os direitos reservados.</p>
         </div>
     </footer>
@@ -206,6 +222,27 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        /* Plan card interactive glow + tilt on mouse move */
+        document.querySelectorAll('.plan').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+
+                card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+                card.style.setProperty('--glow-x', x + 'px');
+                card.style.setProperty('--glow-y', y + 'px');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
     </script>
 </body>
 </html>
