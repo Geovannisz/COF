@@ -314,7 +314,6 @@ body::before {
   width: 340px;
   text-align: center;
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-  overflow: hidden;
   --glow-x: 50%;
   --glow-y: 50%;
 }
