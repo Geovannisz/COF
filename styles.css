@@ -92,7 +92,7 @@ body::before {
   position: absolute;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-style: italic;
-  color: rgba(138, 43, 226, 0.13);
+  color: rgba(138, 43, 226, 0.18);
   font-size: clamp(1rem, 2.2vw, 1.4rem);
   animation: floatSymbol 20s ease-in-out infinite;
   user-select: none;
@@ -101,7 +101,7 @@ body::before {
 
 .physics-graphic {
   position: absolute;
-  color: rgba(138, 43, 226, 0.12);
+  color: rgba(138, 43, 226, 0.17);
   animation: floatGraphic 22s ease-in-out infinite;
   user-select: none;
 }
@@ -353,9 +353,9 @@ body::before {
 .plan.featured::before {
   content: '⭐ Mais Popular';
   position: absolute;
-  top: -13px;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #fff;
   font-size: 0.75rem;
@@ -365,6 +365,7 @@ body::before {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
+  z-index: 2;
 }
 
 .plan h2 {
