@@ -7,7 +7,340 @@
     <meta name="keywords" content="curso de física, curso de matemática, aulas online, física para universitários, matemática para universitários, cálculo, álgebra linear, física geral, mecânica, eletromagnetismo, física quântica, astronomia, geovannisz, dois físicos e um vetor">
     <title>Escolha seu plano ideal e Perguntas Frequentes</title>
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Yeseva One', serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .toggle {
+            background-color: #444;
+            border-radius: 15px;
+            width: 70px;
+            height: 30px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggle::before {
+            content: 'Mensal';
+            position: absolute;
+            width: 50%;
+            text-align: center;
+            color: #888;
+            font-size: 0.8em;
+            font-weight: bold;
+            left: -50px;
+            top: 7px;
+        }
+        .toggle::after {
+            content: 'Anual';
+            position: absolute;
+            width: 50%;
+            text-align: center;
+            color: #888;
+            font-size: 0.8em;
+            font-weight: bold;
+            right: -50px;
+            top: 7px;
+        }
+        .toggle-switch {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            top: 2px;
+            left: 2px;
+            transition: left 0.3s;
+        }
+        .annual .toggle-switch {
+            left: 42px;
+        }
+        .annual {
+            background-color: #8a2be2; /* Azul quando anual */
+        }
+        .plan-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .plan {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: box-shadow 0.3s; /* Adiciona uma transição suave */
+        }
+        .plan h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .plan .price {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .plan ul li {
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        .plan ul li span {
+            margin-right: 10px;
+        }
+        .plan ul li.available span {
+            color: #8a2be2;
+        }
+        .plan ul li.unavailable {
+            color: #666;
+        }
+        .plan .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .plan .button-container a {
+            background-color: #8a2be2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .plan .price {
+            font-size: 2.4em;
+            margin: 20px 0;
+        }
+        /* Estilos para "/mês" e "/ano" */
+        .plan .price span {
+            font-size: 0.6em; /* Tamanho menor */
+            color: #ddd;     /* Cinza claro */
+        }
+        /* Estilos para os valores dos preços */
+        .plan .price strong {
+            font-weight: bold; /* Negrito */
+        }
+        /* Estilos padrão para o contorno e animação */
+        .plan:hover {
+            box-shadow: 0 0 5px 2px #fff;
+        }
+        /* Estilos para planos no modo anual */
+        .annual .plan:hover {
+            box-shadow: 0 0 5px 2px gold; /* Contorno dourado */
+        }
+        .button-container a { 
+            transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transições */
+        }
+        .button-container a:hover {
+            transform: translateY(-2px); /* Efeito de "elevar" ao passar o mouse */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
+        /* Estilo da linha horizontal */
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #fff;
+            margin: 40px 0;
+        }
+        /* Estilos do segundo código */
+        body.faq {
+            font-family: Arial, sans-serif;
+            background-color: #8A2BE2; /* Cor de fundo roxa */
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+        }
+        .header a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .faq-item {
+            background-color: #1b1b1b;
+            color: #8d8d8d; /* Cor do texto da resposta ajustada para um cinza levemente escuro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+            hyphens: auto;
+        }
+        .faq-item h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #dddddd; /* Cor do título das perguntas */
+        }
+        .faq-item p {
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+        .link {
+            color: #8A2BE2; /* Cor roxa */
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Estilos para a seção de currículo */
+        .curriculum-container {
+            padding: 20px 0;
+            text-align: center;
+        }
+        .curriculum-container h2 {
+            font-family: 'Yeseva One', serif;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .curriculum-container p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        .subject-areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .subject-areas span {
+            background-color: #333;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .curriculum-container .button-link {
+            display: inline-block;
+            background-color: #8a2be2;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-top: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .curriculum-container p:last-of-type {
+            font-size: 1em;
+        }
+
+        /* Estilos para a seção de depoimentos */
+        .testimonials-container {
+            padding: 20px 0;
+        }
+        .testimonials-container h2 {
+            font-family: 'Yeseva One', serif;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .testimonial-item {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .testimonial-item p:first-of-type {
+            font-style: italic;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+        .testimonial-item p:last-of-type {
+            font-weight: bold;
+            color: #8a2be2;
+        }
+
+        /* Estilos para o rodapé */
+        .footer {
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+            font-size: 0.9em;
+            border-top: 1px solid #444;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .social-share {
+            margin-bottom: 15px;
+        }
+        .social-share p {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .social-share a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: #8a2be2;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        .contact {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: #8a2be2;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -141,43 +474,38 @@
         </div>
     </div>
 
-    <!-- ========== Curriculum ========== -->
-    <hr class="divider">
-    <section class="section curriculum-container reveal">
-        <h2 class="section-title">Conteúdo do Curso</h2>
-        <p class="section-subtitle">Nosso curso abrange uma vasta gama de tópicos em Física e Matemática, projetado para fornecer uma base sólida e aprofundada. Explore desde os fundamentos até conceitos avançados.</p>
-        <div class="subject-tags">
-            <span class="subject-tag">Cálculo Diferencial e Integral</span>
-            <span class="subject-tag">Mecânica Clássica</span>
-            <span class="subject-tag">Álgebra Linear</span>
-            <span class="subject-tag">Eletromagnetismo</span>
-            <span class="subject-tag">Física Moderna</span>
-            <span class="subject-tag">Astronomia e Astrofísica</span>
-            <span class="subject-tag">E Muito Mais!</span>
+    <hr> <!-- Add a separator line -->
+    <div class="curriculum-container">
+        <h2>Conteúdo do Curso</h2>
+        <p>Nosso curso abrange uma vasta gama de tópicos em Física e Matemática, projetado para fornecer uma base sólida e aprofundada. Explore desde os fundamentos até conceitos avançados.</p>
+        <div class="subject-areas">
+            <span>Cálculo Diferencial e Integral</span>
+            <span>Mecânica Clássica</span>
+            <span>Álgebra Linear</span>
+            <span>Eletromagnetismo</span>
+            <span>Física Moderna</span>
+            <span>Astronomia e Astrofísica</span>
+            <span>E Muito Mais!</span>
         </div>
-        <p class="section-subtitle">Para ver a lista completa de disciplinas e aulas planejadas, gravadas e disponíveis, acesse nosso sumário detalhado:</p>
-        <a href="https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md" target="_blank" class="btn-primary">Ver Sumário Completo das Aulas</a>
-    </section>
+        <p>Para ver a lista completa de disciplinas e aulas planejadas, gravadas e disponíveis, acesse nosso sumário detalhado:</p>
+        <a href="https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md" target="_blank" class="button-link">Ver Sumário Completo das Aulas</a>
+    </div>
 
-    <!-- ========== Testimonials ========== -->
-    <hr class="divider">
-    <section class="section reveal">
-        <h2 class="section-title">O que dizem nossos alunos?</h2>
+    <hr> <!-- Add a separator line -->
+    <div class="testimonials-container">
+        <h2>O que dizem nossos alunos?</h2>
         <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <div class="quote-icon">&ldquo;</div>
-                <p class="quote-text">Este curso transformou minha compreensão da física! As explicações são claras e os exemplos práticos ajudam muito.</p>
-                <p class="quote-author">— João Silva, Estudante de Engenharia</p>
+            <div class="testimonial-item">
+                <p>"Este curso transformou minha compreensão da física! As explicações são claras e os exemplos práticos ajudam muito."</p>
+                <p>- João Silva, Estudante de Engenharia</p>
             </div>
-            <div class="testimonial-card">
-                <div class="quote-icon">&ldquo;</div>
-                <p class="quote-text">Finalmente encontrei um lugar que ensina física de verdade, desde o básico até os tópicos avançados. Recomendo!</p>
-                <p class="quote-author">— Maria Oliveira, Entusiasta da Ciência</p>
+            <div class="testimonial-item">
+                <p>"Finalmente encontrei um lugar que ensina física de verdade, desde o básico até os tópicos avançados. Recomendo!"</p>
+                <p>- Maria Oliveira, Entusiasta da Ciência</p>
             </div>
-            <div class="testimonial-card">
-                <div class="quote-icon">&ldquo;</div>
-                <p class="quote-text">O material de apoio e as listas de exercícios são excelentes para fixar o conteúdo. Vale cada centavo!</p>
-                <p class="quote-author">— Carlos Pereira, Desenvolvedor de Software</p>
+            <div class="testimonial-item">
+                <p>"O material de apoio e as listas de exercícios são excelentes para fixar o conteúdo. Vale cada centavo!"</p>
+                <p>- Carlos Pereira, Desenvolvedor de Software</p>
             </div>
         </div>
     </section>
@@ -237,17 +565,18 @@
         </div>
     </section>
 
-    <!-- ========== Footer ========== -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <p class="share-heading">Compartilhe nosso curso:</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F" target="_blank" title="Facebook" aria-label="Compartilhar no Facebook">f</a>
-                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank" title="Twitter" aria-label="Compartilhar no Twitter">𝕏</a>
-                <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20https%3A%2F%2Fgeovannisz.github.io%2FCOF%2F" target="_blank" title="WhatsApp" aria-label="Compartilhar no WhatsApp">w</a>
-            </div>
-            <a href="mailto:geovanni@usp.br" class="contact-link">geovanni@usp.br</a>
-            <p class="rights">&copy; 2024 Dois Físicos e um Vetor. Todos os direitos reservados.</p>
+    <div class="footer">
+        <div class="social-share">
+            <p>Compartilhe nosso curso:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL_HERE" target="_blank">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=YOUR_PAGE_URL_HERE&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank">Twitter</a>
+            <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20YOUR_PAGE_URL_HERE" target="_blank">WhatsApp</a>
+        </div>
+        <div class="contact">
+            <a href="mailto:geovanni@alumni.usp.br">Contato: geovanni@alumni.usp.br</a>
+        </div>
+        <div class="rights">
+            &copy; 2024 Dois Físicos e um Vetor.<br>Todos os direitos reservados.
         </div>
     </footer>
 
