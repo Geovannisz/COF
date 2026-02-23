@@ -230,17 +230,108 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Estilos para a seção de currículo */
+        .curriculum-container {
+            padding: 20px 0;
+            text-align: center;
+        }
+        .curriculum-container h2 {
+            font-family: 'Yeseva One', serif;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .curriculum-container p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        .subject-areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .subject-areas span {
+            background-color: #333;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .curriculum-container .button-link {
+            display: inline-block;
+            background-color: #8a2be2;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-top: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .curriculum-container p:last-of-type {
+            font-size: 1em;
+        }
+
+        /* Estilos para a seção de depoimentos */
+        .testimonials-container {
+            padding: 20px 0;
+        }
+        .testimonials-container h2 {
+            font-family: 'Yeseva One', serif;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .testimonial-item {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .testimonial-item p:first-of-type {
+            font-style: italic;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+        .testimonial-item p:last-of-type {
+            font-weight: bold;
+            color: #8a2be2;
+        }
+
         /* Estilos para o rodapé */
         .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding: 20px;
             background-color: #111;
             color: #fff;
             font-size: 0.9em;
             border-top: 1px solid #444;
             margin-top: 40px;
+            text-align: center;
+        }
+        .social-share {
+            margin-bottom: 15px;
+        }
+        .social-share p {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .social-share a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: #8a2be2;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        .contact {
+            margin-bottom: 10px;
         }
         .footer a {
             color: #8a2be2;
@@ -299,37 +390,37 @@
     </div>
 
     <hr> <!-- Add a separator line -->
-    <div class="curriculum-container" style="padding: 20px 0; text-align: center;">
-        <h2 style="font-family: 'Yeseva One', serif; font-size: 2.2em; margin-bottom: 20px;">Conteúdo do Curso</h2>
-        <p style="font-size: 1.1em; max-width: 800px; margin: 0 auto 20px;">Nosso curso abrange uma vasta gama de tópicos em Física e Matemática, projetado para fornecer uma base sólida e aprofundada. Explore desde os fundamentos até conceitos avançados.</p>
-        <div class="subject-areas" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 20px;">
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Cálculo Diferencial e Integral</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Mecânica Clássica</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Álgebra Linear</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Eletromagnetismo</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Física Moderna</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">Astronomia e Astrofísica</span>
-            <span style="background-color: #333; padding: 8px 15px; border-radius: 5px; font-size: 0.9em;">E Muito Mais!</span>
+    <div class="curriculum-container">
+        <h2>Conteúdo do Curso</h2>
+        <p>Nosso curso abrange uma vasta gama de tópicos em Física e Matemática, projetado para fornecer uma base sólida e aprofundada. Explore desde os fundamentos até conceitos avançados.</p>
+        <div class="subject-areas">
+            <span>Cálculo Diferencial e Integral</span>
+            <span>Mecânica Clássica</span>
+            <span>Álgebra Linear</span>
+            <span>Eletromagnetismo</span>
+            <span>Física Moderna</span>
+            <span>Astronomia e Astrofísica</span>
+            <span>E Muito Mais!</span>
         </div>
-        <p style="font-size: 1em;">Para ver a lista completa de disciplinas e aulas planejadas, gravadas e disponíveis, acesse nosso sumário detalhado:</p>
-        <a href="https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md" target="_blank" class="button-container" style="display: inline-block; background-color: #8a2be2; color: #fff; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-size: 1.1em; margin-top: 10px; transition: transform 0.3s, box-shadow 0.3s;">Ver Sumário Completo das Aulas</a>
+        <p>Para ver a lista completa de disciplinas e aulas planejadas, gravadas e disponíveis, acesse nosso sumário detalhado:</p>
+        <a href="https://github.com/Geovannisz/COF/blob/main/AulasGravadas.md" target="_blank" class="button-link">Ver Sumário Completo das Aulas</a>
     </div>
 
     <hr> <!-- Add a separator line -->
-    <div class="testimonials-container" style="padding: 20px 0;">
-        <h2 style="font-family: 'Yeseva One', serif; font-size: 2.2em; margin-bottom: 30px;">O que dizem nossos alunos?</h2>
-        <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div class="testimonial-item" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                <p style="font-style: italic; color: #ddd; margin-bottom: 10px;">"Este curso transformou minha compreensão da física! As explicações são claras e os exemplos práticos ajudam muito."</p>
-                <p style="font-weight: bold; color: #8a2be2;">- João Silva, Estudante de Engenharia</p>
+    <div class="testimonials-container">
+        <h2>O que dizem nossos alunos?</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <p>"Este curso transformou minha compreensão da física! As explicações são claras e os exemplos práticos ajudam muito."</p>
+                <p>- João Silva, Estudante de Engenharia</p>
             </div>
-            <div class="testimonial-item" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                <p style="font-style: italic; color: #ddd; margin-bottom: 10px;">"Finalmente encontrei um lugar que ensina física de verdade, desde o básico até os tópicos avançados. Recomendo!"</p>
-                <p style="font-weight: bold; color: #8a2be2;">- Maria Oliveira, Entusiasta da Ciência</p>
+            <div class="testimonial-item">
+                <p>"Finalmente encontrei um lugar que ensina física de verdade, desde o básico até os tópicos avançados. Recomendo!"</p>
+                <p>- Maria Oliveira, Entusiasta da Ciência</p>
             </div>
-            <div class="testimonial-item" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                <p style="font-style: italic; color: #ddd; margin-bottom: 10px;">"O material de apoio e as listas de exercícios são excelentes para fixar o conteúdo. Vale cada centavo!"</p>
-                <p style="font-weight: bold; color: #8a2be2;">- Carlos Pereira, Desenvolvedor de Software</p>
+            <div class="testimonial-item">
+                <p>"O material de apoio e as listas de exercícios são excelentes para fixar o conteúdo. Vale cada centavo!"</p>
+                <p>- Carlos Pereira, Desenvolvedor de Software</p>
             </div>
         </div>
     </div>
@@ -390,15 +481,15 @@
         </div>
     </div>
 
-    <div class="footer" style="padding: 20px; background-color: #111; color: #fff; font-size: 0.9em; border-top: 1px solid #444; margin-top: 40px; text-align: center;">
-        <div class="social-share" style="margin-bottom: 15px;">
-            <p style="margin-bottom: 8px; font-size: 1em;">Compartilhe nosso curso:</p>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL_HERE" target="_blank" style="margin: 0 8px; text-decoration: none; color: #8a2be2; font-weight: bold; font-size: 0.95em;">Facebook</a>
-            <a href="https://twitter.com/intent/tweet?url=YOUR_PAGE_URL_HERE&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank" style="margin: 0 8px; text-decoration: none; color: #8a2be2; font-weight: bold; font-size: 0.95em;">Twitter</a>
-            <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20YOUR_PAGE_URL_HERE" target="_blank" style="margin: 0 8px; text-decoration: none; color: #8a2be2; font-weight: bold; font-size: 0.95em;">WhatsApp</a>
+    <div class="footer">
+        <div class="social-share">
+            <p>Compartilhe nosso curso:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL_HERE" target="_blank">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=YOUR_PAGE_URL_HERE&text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!" target="_blank">Twitter</a>
+            <a href="https://api.whatsapp.com/send?text=Confira%20este%20incrível%20curso%20de%20Física%20e%20Matemática!%20YOUR_PAGE_URL_HERE" target="_blank">WhatsApp</a>
         </div>
-        <div class="contact" style="margin-bottom: 10px;">
-            <a href="mailto:geovanni@alumni.usp.br" style="color: #8a2be2; text-decoration: none;">Contato: geovanni@alumni.usp.br</a>
+        <div class="contact">
+            <a href="mailto:geovanni@alumni.usp.br">Contato: geovanni@alumni.usp.br</a>
         </div>
         <div class="rights">
             &copy; 2024 Dois Físicos e um Vetor.<br>Todos os direitos reservados.
