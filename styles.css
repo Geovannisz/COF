@@ -642,12 +642,6 @@ body::before {
   margin: 0 auto;
 }
 
-.footer .share-heading {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-}
-
 .social-links {
   display: flex;
   justify-content: center;
